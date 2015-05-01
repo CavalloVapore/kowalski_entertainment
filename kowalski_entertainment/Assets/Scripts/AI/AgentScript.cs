@@ -17,5 +17,11 @@ public class AgentScript : MonoBehaviour
 	void Update () 
     {
         agent.SetDestination(target.position);
+
+        /*
+        if ((Vector3.Distance(agent.destination, agent.transform.position) <= agent.stoppingDistance) && (!agent.hasPath || agent.velocity.sqrMagnitude == 0f))
+        {
+            Destroy(gameObject);
+        }*/
 	}
 }

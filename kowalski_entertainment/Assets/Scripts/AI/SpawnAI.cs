@@ -15,15 +15,72 @@ public class SpawnAI : MonoBehaviour
     public Transform spawnPoint9;
     public Transform spawnPoint10;
 
+    public GameObject AI;
+
+    private int count = 0;
+    private int limit = 50;
+    private int random;
+
 	// Use this for initialization
 	void Start () 
     {
 	
 	}
-	
-	// Update is called once per frame
-	void Update () 
+
+    void FixedUpdate()
     {
+        count++;
+
+        if(count > limit)
+        {
+            count = 0;
+
+            random = Random.Range(0, 10);
+
+            switch(random)
+            {
+                case (1):
+                    Instantiate(AI, spawnPoint1.position, Quaternion.identity);
+                    break;
+
+                case (2):
+                    Instantiate(AI, spawnPoint2.position, Quaternion.identity);
+                    break;
+
+                case (3):
+                    Instantiate(AI, spawnPoint3.position, Quaternion.identity);
+                    break;
+
+                case (4):
+                    Instantiate(AI, spawnPoint4.position, Quaternion.identity);
+                    break;
+
+                case (5):
+                    Instantiate(AI, spawnPoint5.position, Quaternion.identity);
+                    break;
+
+                case (6):
+                    Instantiate(AI, spawnPoint6.position, Quaternion.identity);
+                    break;
+
+                case (7):
+                    Instantiate(AI, spawnPoint7.position, Quaternion.identity);
+                    break;
+
+                case (8):
+                    Instantiate(AI, spawnPoint8.position, Quaternion.identity);
+                    break;
+
+                case (9):
+                    Instantiate(AI, spawnPoint9.position, Quaternion.identity);
+                    break;
+
+                case (10):
+                    Instantiate(AI, spawnPoint10.position, Quaternion.identity);
+                    break;
+            }
+        }
+    }
 	
-	}
+   
 }
