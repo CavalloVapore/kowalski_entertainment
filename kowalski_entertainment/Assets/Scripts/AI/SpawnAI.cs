@@ -26,7 +26,7 @@ public class SpawnAI : MonoBehaviour
     {
 	
 	}
-
+    
     void FixedUpdate()
     {
         count++;
