@@ -17,11 +17,11 @@ public class Player : MonoBehaviour
         Vector3 syncVelocity = Vector3.zero;
         if (stream.isWriting)
         {
-            syncPosition = GetComponent<Rigidbody>().position;
+            syncPosition = transform.position;
             stream.Serialize(ref syncPosition);
 
-            syncPosition = GetComponent<Rigidbody>().velocity;
-            stream.Serialize(ref syncVelocity);
+            //syncPosition = transform.velocity;
+            //stream.Serialize(ref syncVelocity);
         }
         else
         {
@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
             lastSynchronizationTime = Time.time;
 
             syncEndPosition = syncPosition + syncVelocity * syncDelay;
-            syncStartPosition = GetComponent<Rigidbody>().position;
+            syncStartPosition = transform.position;
         }
     }
 
@@ -59,23 +59,23 @@ public class Player : MonoBehaviour
     private void InputMovement()
     {
         if (Input.GetKey(KeyCode.W))
-            GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward);
 
         if (Input.GetKey(KeyCode.S))
-            GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position - Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.back);
 
         if (Input.GetKey(KeyCode.D))
-            GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position + Vector3.right * speed * Time.deltaTime);
+            transform.Translate(Vector3.right);
 
         if (Input.GetKey(KeyCode.A))
-            GetComponent<Rigidbody>().MovePosition(GetComponent<Rigidbody>().position - Vector3.right * speed * Time.deltaTime);
+            transform.Translate(Vector3.left);
     }
 
     private void SyncedMovement()
     {
         syncTime += Time.deltaTime;
 
-        GetComponent<Rigidbody>().position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
+        this.transform.position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
     }
 
 
