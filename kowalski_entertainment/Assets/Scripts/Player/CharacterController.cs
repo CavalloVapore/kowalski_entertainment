@@ -18,9 +18,7 @@ public class CharacterController : MonoBehaviour {
     private Transform posWest;
 
     public GameObject projectilePrefab;
-    private RaycastHit hit;
-    private Ray ray;
-
+    
     // Use this for initialization
 	void Start () 
     {
@@ -34,9 +32,16 @@ public class CharacterController : MonoBehaviour {
 	void Update () 
     {
         //Ray
-        ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width*0.5f, Screen.height*0.5f, 0f));
-        Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
-	    //Input
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width*0.5f, Screen.height*0.5f, 0f));
+        RaycastHit hit;
+        //Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+
+     //   if(Physics.Raycast(ray, hit, 100f))
+     //   {
+
+     //   }
+	    
+        //Input
 
         //Shop?
         
@@ -48,7 +53,7 @@ public class CharacterController : MonoBehaviour {
 
         //Postionen Switchen
         //Switch Rechts
-         if (Input.GetButtonDown("SwitchRechts"))
+         /*if (Input.GetButtonDown("SwitchRechts"))
          {
              myPosition = (Position)(((int)myPosition + 1) % 4);
              Switch();
@@ -59,6 +64,7 @@ public class CharacterController : MonoBehaviour {
              myPosition = (Position)(((int)myPosition - 1) % 4);
              Switch();
          }
+          * */
         
     }
 
