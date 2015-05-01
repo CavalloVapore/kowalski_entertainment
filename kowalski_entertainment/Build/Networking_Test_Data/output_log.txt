@@ -12,12 +12,12 @@ Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainm
 Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.057 seconds
+- Completed reload, in  0.047 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test_Data\Managed\System.Core.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1ae4 -> priority: 1 
-  Thread -> id: 1e88 -> priority: 1 
+  Thread -> id: 1bd4 -> priority: 1 
+  Thread -> id: 880 -> priority: 1 
