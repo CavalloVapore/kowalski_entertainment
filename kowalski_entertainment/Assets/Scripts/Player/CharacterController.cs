@@ -34,7 +34,8 @@ public class CharacterController : MonoBehaviour {
 	void Update () 
     {
         //Ray
-        //ray = Camera.main.ScreenPointToRay(Vector3(Screen.width*0.5f, ))
+        ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width*0.5f, Screen.height*0.5f, 0f));
+        Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 	    //Input
 
         //Shop?
