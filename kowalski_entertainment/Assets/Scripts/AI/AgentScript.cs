@@ -4,7 +4,11 @@ using System.Collections;
 public class AgentScript : MonoBehaviour 
 {
 
-    public Transform target;
+    public Transform target1;
+    public Transform target2;
+    public Transform target3;
+    public Transform target4;
+
     NavMeshAgent agent;
 
 	// Use this for initialization
@@ -16,12 +20,24 @@ public class AgentScript : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        agent.SetDestination(target.position);
 
-        /*
-        if ((Vector3.Distance(agent.destination, agent.transform.position) <= agent.stoppingDistance) && (!agent.hasPath || agent.velocity.sqrMagnitude == 0f))
+        if (gameObject.transform.position.z < 40)
         {
-            Destroy(gameObject);
-        }*/
+            agent.SetDestination(target1.position);
+        }
+        else if (gameObject.transform.position.z > 90)
+        {
+            agent.SetDestination(target3.position);
+        }
+        else if (gameObject.transform.position.x > 30)
+        {
+            agent.SetDestination(target4.position);
+        }
+        else
+        {
+            agent.SetDestination(target2.position);
+        }
+
+        
 	}
 }
