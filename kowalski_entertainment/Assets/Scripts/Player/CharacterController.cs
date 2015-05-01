@@ -10,16 +10,11 @@ public class CharacterController : MonoBehaviour {
     private float heat;
     private float heatInc;
     private float heatDec;
-    private int money;
 
     private Transform posNorth;
     private Transform posEast;
     private Transform posSouth;
     private Transform posWest;
-
-    public GameObject projectilePrefab;
-    private RaycastHit hit;
-    private Ray ray;
 
     // Use this for initialization
 	void Start () 
@@ -33,13 +28,8 @@ public class CharacterController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        //Ray
-        ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width*0.5f, Screen.height*0.5f, 0f));
-        Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 	    //Input
 
-        //Shop?
-        
         //Feuern
         if (Input.GetButtonDown("Fire1") && !overheat)
         {
@@ -48,7 +38,7 @@ public class CharacterController : MonoBehaviour {
 
         //Postionen Switchen
         //Switch Rechts
-         if (Input.GetButtonDown("SwitchRechts"))
+        /* if (Input.GetButtonDown("SwitchRechts"))
          {
              myPosition = (Position)(((int)myPosition + 1) % 4);
              Switch();
@@ -59,7 +49,7 @@ public class CharacterController : MonoBehaviour {
              myPosition = (Position)(((int)myPosition - 1) % 4);
              Switch();
          }
-        
+        */
     }
 
     void FixedUpdate()
@@ -93,16 +83,6 @@ public class CharacterController : MonoBehaviour {
 
     void Switch()
     {
-        switch (myPosition)
-        {
-            case Position.NORTH:
-                break;
-            case Position.EAST:
-                break;
-            case Position.SOUTH:
-                break;
-            case Position.WEST:
-                break;
-        }
+
     }
 }
