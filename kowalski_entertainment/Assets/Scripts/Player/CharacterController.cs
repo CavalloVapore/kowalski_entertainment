@@ -16,6 +16,10 @@ public class CharacterController : MonoBehaviour {
     private Transform posSouth;
     private Transform posWest;
 
+
+    public GameObject projectilePrefab;
+    
+
     // Use this for initialization
 	void Start () 
     {
@@ -28,7 +32,21 @@ public class CharacterController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
+
+        //Ray
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width*0.5f, Screen.height*0.5f, 0f));
+        RaycastHit hit;
+        //Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+
+       // if(Physics.Raycast(ray, hit, 100f, ))
+     //   {
+
+      //  }
+	    
+        //Input
+
 	    //Input
+
 
         //Feuern
         if (Input.GetButtonDown("Fire1") && !overheat)
@@ -38,7 +56,9 @@ public class CharacterController : MonoBehaviour {
 
         //Postionen Switchen
         //Switch Rechts
+
         /* if (Input.GetButtonDown("SwitchRechts"))
+
          {
              myPosition = (Position)(((int)myPosition + 1) % 4);
              Switch();
@@ -49,7 +69,9 @@ public class CharacterController : MonoBehaviour {
              myPosition = (Position)(((int)myPosition - 1) % 4);
              Switch();
          }
-        */
+
+          * */
+
     }
 
     void FixedUpdate()
