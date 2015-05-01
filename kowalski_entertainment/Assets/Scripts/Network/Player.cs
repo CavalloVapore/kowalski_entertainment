@@ -37,6 +37,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    void start()
+    {
+        InputColorChange();
+    }
+
     void Awake()
     {
         lastSynchronizationTime = Time.time;
@@ -47,7 +52,7 @@ public class Player : MonoBehaviour
         if (GetComponent<NetworkView>().isMine)
         {
             InputMovement();
-            InputColorChange();
+            //InputColorChange();
         }
         else
         {
@@ -78,11 +83,9 @@ public class Player : MonoBehaviour
         this.transform.position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
     }
 
-
-    private void InputColorChange()
+    public void InputColorChange()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-            ChangeColorTo(new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f)));
+        ChangeColorTo(new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f)));
     }
 
     [RPC] void ChangeColorTo(Vector3 color)
