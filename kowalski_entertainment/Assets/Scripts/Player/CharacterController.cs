@@ -38,10 +38,10 @@ public class CharacterController : MonoBehaviour {
         RaycastHit hit;
         //Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 
-     //   if(Physics.Raycast(ray, hit, 100f))
+       // if(Physics.Raycast(ray, hit, 100f, ))
      //   {
 
-     //   }
+      //  }
 	    
         //Input
 
