@@ -26,7 +26,7 @@ namespace UnityStandardAssets.Utility
         private Vector3 m_TargetAngles;
         private Vector3 m_FollowAngles;
         private Vector3 m_FollowVelocity;
-        private Quaternion m_OriginalRotation;
+        public Quaternion m_OriginalRotation;
 
 
         private void Start()
