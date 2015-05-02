@@ -16,6 +16,9 @@ public class Enemy
     public int enemyHealth;
     public int enemySpeed;
     public int enemyPriority;
+    public int enemyAngularSpeed;
+    public int enemyStoppingDistance;
+    public int enemyAcceleration;
 
     
     public enum EnemyType
@@ -26,7 +29,7 @@ public class Enemy
     }
 
     
-    public Enemy(string save, int id, string title, EnemyType type, int health, int speed, int priority)
+    public Enemy(string save, int id, string title, EnemyType type, int health, int speed, int priority, int angularSpeed, int stoppingDistancce, int acceleration)
     {
         enemySave = save;
         enemyID = id;
@@ -35,6 +38,9 @@ public class Enemy
         enemyHealth = health;
         enemySpeed = speed;
         enemyPriority = priority;
+        enemyAngularSpeed = angularSpeed;
+        enemyStoppingDistance = stoppingDistancce;
+        enemyAcceleration = acceleration;
     }
 
    
