@@ -14,38 +14,26 @@ Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainm
 Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test21_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test21_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test21_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.063 seconds
+- Completed reload, in  0.052 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test21_Data\Managed\System.Core.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 10a0 -> priority: 1 
-  Thread -> id: 22c8 -> priority: 1 
-Received pong from 25.90.224.157:25000
- 
-(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
-
-Received pong from 131.159.194.154:25000
- 
-(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
-
-AllocatedID: 150
+  Thread -> id: 2478 -> priority: 1 
+  Thread -> id: 26fc -> priority: 1 
+AllocatedID: 1
 UnityEngine.Debug:Internal_Log(Int32, String, Object)
 UnityEngine.Debug:Log(Object)
 Player:Awake() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:53)
 UnityEngine.Network:INTERNAL_CALL_Instantiate(Object, Vector3&, Quaternion&, Int32)
 UnityEngine.Network:Instantiate(Object, Vector3, Quaternion, Int32) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:629)
 NetworkManager:SpawnPlayer() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\NetworkManager.cs:81)
-NetworkManager:OnConnectedToServer() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\NetworkManager.cs:75)
- 
-(Filename: D:/MyDocuments/Git/kowalski_entertainment/kowalski_entertainment/Assets/Scripts/Network/Player.cs Line: 53)
-
-AllocatedID: 1
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-Player:Awake() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:53)
+NetworkManager:OnServerInitialized() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\NetworkManager.cs:45)
+UnityEngine.Network:InitializeServer(Int32, Int32, Boolean)
+NetworkManager:StartServer() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\NetworkManager.cs:39)
+NetworkManager:OnGUI() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\NetworkManager.cs:21)
  
 (Filename: D:/MyDocuments/Git/kowalski_entertainment/kowalski_entertainment/Assets/Scripts/Network/Player.cs Line: 53)
 

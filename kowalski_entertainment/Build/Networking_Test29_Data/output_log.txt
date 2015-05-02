@@ -1,0 +1,393 @@
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     128 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test29_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test29_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test29_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test29_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test29_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test29_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test29_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test29_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.057 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test29_Data\Managed\System.Core.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: a88 -> priority: 1 
+  Thread -> id: 1438 -> priority: 1 
+Received pong from 25.90.224.157:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Received pong from 131.159.194.154:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:152)
+Player:InputTest() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:141)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:66)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+
+Sending RPC failed because 'Test2' parameter 0 (UnityEngine.GameObject) is not supported.
+UnityEngine.NetworkView:Internal_RPC(NetworkView, String, RPCMode, Object[])
+UnityEngine.NetworkView:RPC(String, RPCMode, Object[]) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\Networking.gen.cs:409)
+Player:Test2(GameObject) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:171)
+Player:InputTest2() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:160)
+Player:Update() (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\Player.cs:67)
+
+[C:/buildslave/unity/build/Runtime/Network/PackMonoRPC.cpp line 473] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/Networking.gen.cs Line: 409)
+

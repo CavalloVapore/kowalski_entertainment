@@ -10,8 +10,13 @@ public class NetworkManager : MonoBehaviour
     private HostData[] hostList;
 
     public GameObject playerPrefab;
+    public GameObject playerPrefab2;
+
+    public Transform spawn1;
 
     private int playerCount = 1;
+
+    public bool[] hatches;
 
     void OnGUI()
     {
@@ -78,7 +83,9 @@ public class NetworkManager : MonoBehaviour
 
     private void SpawnPlayer()
     {
-        Network.Instantiate(playerPrefab, Vector3.right * playerCount, Quaternion.identity, 0);
+        Network.Instantiate(playerPrefab, spawn1.position, Quaternion.identity, 0);
+        for (int i = 0; i <= 100; i++ )
+            Network.Instantiate(playerPrefab2, spawn1.position + new Vector3(Random.Range(0, 5), Random.Range(0, 5), Random.Range(0, 5)), Quaternion.identity, 0);
     }
 
     private void OnPlayerConnected(NetworkPlayer player)
