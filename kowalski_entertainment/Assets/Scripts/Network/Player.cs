@@ -86,14 +86,11 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
             transform.Translate(Vector3.left * Time.deltaTime * speed, Space.World);
 
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.E))
             transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rotSpeed, Space.World);
 
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.Q))
             transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * rotSpeed, Space.World);
-
-        if (Input.GetKey(KeyCode.Z))
-            transform.localScale.Set(transform.localScale.x * 0.1f, transform.localScale.y, transform.localScale.z);
     }
 
     private void SyncedMovement()
@@ -120,7 +117,7 @@ public class Player : MonoBehaviour
 
     public void InputText()
     {
-        if (Input.GetButtonDown("F"))
+        if (Input.GetButtonDown("G"))
             Chat("Player " + nView.viewID + ": Hi!");
     }
 
