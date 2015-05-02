@@ -13,28 +13,33 @@ public class EnemyUnit : MonoBehaviour
         database = GameObject.FindGameObjectWithTag("Enemy Database").GetComponent<EnemyDatabase>();
         saveName = gameObject.name;
 
+        //Debug.Log(saveName);
+
 	    switch(saveName)
         {
-            case("EnemyLV1"):
+            case("EnemyLV1(Clone)"):
                 enemyUnit = database.enemy[0];
                 break;
 
-            case ("EnemyLV2"):
+            case ("EnemyLV2(Clone)"):
                 enemyUnit = database.enemy[1];
                 break;
 
-            case ("EnemyLV3"):
+            case ("EnemyLV3(Clone)"):
                 enemyUnit = database.enemy[2];
                 break;
 
-            case ("EnemyLV4"):
+            case ("EnemyLV4(Clone)"):
                 enemyUnit = database.enemy[3];
                 break;
 
-            case ("EnemyLV5"):
+            case ("EnemyLV5(Clone)"):
                 enemyUnit = database.enemy[4];
                 break;
         }
+
+        //Debug.Log(enemyUnit.enemyID);
+        //Debug.Log(enemyUnit.enemyHealth);
 	}
 	
 	// Update is called once per frame
@@ -42,13 +47,13 @@ public class EnemyUnit : MonoBehaviour
     {
         if (enemyUnit.enemyHealth <= 0)
         {
-            Debug.Log(enemyUnit.enemyHealth);
-            //Network.Destroy(gameObject);
+            //Debug.Log(enemyUnit.enemyHealth);
+            Network.Destroy(gameObject);
         }
 	}
 
     public void ReduceHealth (int damage)
     {
-        enemyUnit.enemyHealth -= damage;
+        this.enemyUnit.enemyHealth -= damage;
     }
 }
