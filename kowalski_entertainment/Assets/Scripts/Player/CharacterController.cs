@@ -39,7 +39,7 @@ public class CharacterController : MonoBehaviour
 
         //Ray
         Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0f));
-        RaycastHit hit;
+        //RaycastHit hit;
         Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 
         // if(Physics.Raycast(ray, hit, 100f, ))
@@ -55,23 +55,6 @@ public class CharacterController : MonoBehaviour
         {
             Fire();
         }
-
-        //Postionen Switchen
-        //Switch Rechts
-
-        if (Input.GetButtonDown("SwitchRechts"))
-        {
-            myPosition = (Position)(((int)myPosition + 1) % 4);
-            Switch();
-        }
-        //Switch Links
-        if (Input.GetButtonDown("SwitchLinks"))
-        {
-            myPosition = (Position)(((int)myPosition - 1) % 4);
-            Switch();
-        }
-
-
 
     }
 
@@ -109,7 +92,6 @@ public class CharacterController : MonoBehaviour
 
     void Switch()
     {
-        Debug.Log("Tyo");
         switch (myPosition)
         {
             case Position.NORTH:
@@ -125,11 +107,15 @@ public class CharacterController : MonoBehaviour
                 smr.m_OriginalRotation = posSouth.rotation;
                 break;
             case Position.WEST:
-
                 transform.position = posWest.position;
                 smr.m_OriginalRotation = posWest.rotation;
-
                 break;
         }
+    }
+
+    public void setPosition(int position)
+    {
+        myPosition = (Position)(position);
+        Switch();
     }
 }
