@@ -63,9 +63,7 @@ public class NetworkManager : MonoBehaviour
     {
         Network.InitializeServer(5, 25000, !Network.HavePublicAddress());
         MasterServer.RegisterHost(typeName, gameName);
-
         canvas.enabled = false;
-
     }
 
     void OnServerInitialized()
