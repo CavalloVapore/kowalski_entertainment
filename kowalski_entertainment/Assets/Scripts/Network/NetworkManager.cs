@@ -96,58 +96,61 @@ public class NetworkManager : MonoBehaviour
     private void SpawnPlayer()
     {
         Network.Instantiate(playerPrefab, spawn1.position, Quaternion.identity, 0);
-        for (int i = 0; i <= 50; i++)
-        {
-            random = Random.Range(0, 10);
-
-            switch (random)
-            {
-                case (1):
-                    Instantiate(AI, spawnPoint1.position, Quaternion.identity);
-                    break;
-
-                case (2):
-                    Instantiate(AI, spawnPoint2.position, Quaternion.identity);
-                    break;
-
-                case (3):
-                    Instantiate(AI, spawnPoint3.position, Quaternion.identity);
-                    break;
-
-                case (4):
-                    Instantiate(AI, spawnPoint4.position, Quaternion.identity);
-                    break;
-
-                case (5):
-                    Instantiate(AI, spawnPoint5.position, Quaternion.identity);
-                    break;
-
-                case (6):
-                    Instantiate(AI, spawnPoint6.position, Quaternion.identity);
-                    break;
-
-                case (7):
-                    Instantiate(AI, spawnPoint7.position, Quaternion.identity);
-                    break;
-
-                case (8):
-                    Instantiate(AI, spawnPoint8.position, Quaternion.identity);
-                    break;
-
-                case (9):
-                    Instantiate(AI, spawnPoint9.position, Quaternion.identity);
-                    break;
-
-                case (10):
-                    Instantiate(AI, spawnPoint10.position, Quaternion.identity);
-                    break;
-            }
-        }
     }
 
     private void OnPlayerConnected(NetworkPlayer player)
     {
         playerCount++;
         Debug.Log("Player " + playerCount + " connected from " + player.ipAddress + ":" + player.port);
+        if (playerCount == 2)
+        {
+            for (int i = 0; i <= 50; i++)
+            {
+                random = Random.Range(0, 10);
+
+                switch (random)
+                {
+                    case (1):
+                        Instantiate(AI, spawnPoint1.position, Quaternion.identity);
+                        break;
+
+                    case (2):
+                        Instantiate(AI, spawnPoint2.position, Quaternion.identity);
+                        break;
+
+                    case (3):
+                        Instantiate(AI, spawnPoint3.position, Quaternion.identity);
+                        break;
+
+                    case (4):
+                        Instantiate(AI, spawnPoint4.position, Quaternion.identity);
+                        break;
+
+                    case (5):
+                        Instantiate(AI, spawnPoint5.position, Quaternion.identity);
+                        break;
+
+                    case (6):
+                        Instantiate(AI, spawnPoint6.position, Quaternion.identity);
+                        break;
+
+                    case (7):
+                        Instantiate(AI, spawnPoint7.position, Quaternion.identity);
+                        break;
+
+                    case (8):
+                        Instantiate(AI, spawnPoint8.position, Quaternion.identity);
+                        break;
+
+                    case (9):
+                        Instantiate(AI, spawnPoint9.position, Quaternion.identity);
+                        break;
+
+                    case (10):
+                        Instantiate(AI, spawnPoint10.position, Quaternion.identity);
+                        break;
+                }
+            }
+        }
     }
 }
