@@ -28,6 +28,7 @@ public class CharacterController : MonoBehaviour
     private float spreadInc;
     private float spreadDec;
 
+    private int damage;
     private float atkSpeed;
     private float lastShot;
     Ray ray;
@@ -45,6 +46,7 @@ public class CharacterController : MonoBehaviour
         spreadInc = 0.1f;
         spreadDec = 0.1f;
         atkSpeed = 0.2f;
+        damage = 2;
     }
 
     // Update is called once per frame
@@ -125,11 +127,13 @@ public class CharacterController : MonoBehaviour
         //Fire
         if (Physics.Raycast(ray, out hit))
         {
+            //Enemyhit
             if(hit.collider.gameObject.tag == "Enemy")
             {
                 //ENEMY LOSE LIFE
+                hit.collider.gameObject.GetComponent<EnemyUnit>().ReduceHealth(damage);
             }
-            Debug.Log(hit.collider.gameObject.name);
+            //Debug.Log(hit.collider.gameObject.name);
         }
         //Heat
         heat = Mathf.Min((heat + heatInc), 100);
