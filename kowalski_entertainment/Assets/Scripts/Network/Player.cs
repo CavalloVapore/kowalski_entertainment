@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     private Vector3 syncEndRotation = Vector3.zero;
     private NetworkView nView;
 
+    public string text;
+
+    private bool isHatchOpen = false;
+
     void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
     {
         Vector3 syncPosition = Vector3.zero;
@@ -50,6 +54,7 @@ public class Player : MonoBehaviour
     {
         lastSynchronizationTime = Time.time;
         nView = GetComponent<NetworkView>();
+        ChangeColorTo(new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f)));
     }
 
     void Update()
@@ -57,6 +62,7 @@ public class Player : MonoBehaviour
         if (nView.isMine)
         {
             InputMovement();
+            InputText();
             InputColorChange();
         }
         else
@@ -68,16 +74,16 @@ public class Player : MonoBehaviour
 
     private void InputMovement()
     {
-        if (Input.GetKey(KeyCode.Keypad1))
-            GetComponent<CharacterController>().setPosition(1);
+        if (Input.GetKey(KeyCode.W))
+            transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.World);
 
-        if (Input.GetKey(KeyCode.Keypad2))
+        if (Input.GetKey(KeyCode.S))
             transform.Translate(Vector3.back * Time.deltaTime * speed, Space.World);
 
-        if (Input.GetKey(KeyCode.Keypad3))
+        if (Input.GetKey(KeyCode.D))
             transform.Translate(Vector3.right * Time.deltaTime * speed, Space.World);
 
-        if (Input.GetKey(KeyCode.Keypad4))
+        if (Input.GetKey(KeyCode.A))
             transform.Translate(Vector3.left * Time.deltaTime * speed, Space.World);
 
         if (Input.GetKey(KeyCode.Q))
@@ -85,6 +91,9 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E))
             transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * rotSpeed, Space.World);
+
+        if (Input.GetKey(KeyCode.Z))
+            transform.localScale.Set(transform.localScale.x * 0.1f, transform.localScale.y, transform.localScale.z);
     }
 
     private void SyncedMovement()
@@ -107,6 +116,25 @@ public class Player : MonoBehaviour
 
         if (nView.isMine)
             nView.RPC("ChangeColorTo", RPCMode.OthersBuffered, color);
+    }
+
+    public void InputText()
+    {
+        if (Input.GetButtonDown("F"))
+            Chat("Player " + nView.viewID + ": Hi!");
+    }
+
+    [RPC]
+    void Chat(string a)
+    {
+        text = a;
+        if (nView.isMine)
+            nView.RPC("Chat", RPCMode.OthersBuffered, a);
+    }
+
+    void OnGUI()
+    {
+        GUI.TextField(new Rect(0, 0, 500, 100), text);
     }
 
 
