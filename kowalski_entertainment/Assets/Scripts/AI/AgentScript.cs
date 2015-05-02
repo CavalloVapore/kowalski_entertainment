@@ -20,7 +20,7 @@ public class AgentScript : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-
+        
         if (gameObject.transform.position.z < 40)
         {
             agent.SetDestination(target1.position);
