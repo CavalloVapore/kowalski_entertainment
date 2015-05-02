@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
 public class NetworkManager : MonoBehaviour
 {
     private const string typeName = "TestGame";
@@ -25,20 +25,27 @@ public class NetworkManager : MonoBehaviour
     public Transform spawnPoint9;
     public Transform spawnPoint10;
 
+    public GameObject startButton;
+    public GameObject joinButton;
+
     public GameObject AI;
 
     private int count = 0;
     private int random;
 
+
+    void Start()
+    {
+        //if (GUI.Button(new Rect(100, 100, 250, 100), "Start Server"))
+        startButton.GetComponent<Button>().onClick.AddListener(() => { StartServer(); });
+
+        //if (GUI.Button(new Rect(100, 250, 250, 100), "Refresh Hosts"))
+        joinButton.GetComponent<Button>().onClick.AddListener(() => { RefreshHostList(); });
+    }
     void OnGUI()
     {
         if (!Network.isClient && !Network.isServer)
         {
-            if (GUI.Button(new Rect(100, 100, 250, 100), "Start Server"))
-                StartServer();
-
-            if (GUI.Button(new Rect(100, 250, 250, 100), "Refresh Hosts"))
-                RefreshHostList();
 
             if (hostList != null)
             {
@@ -53,8 +60,9 @@ public class NetworkManager : MonoBehaviour
 
     private void StartServer()
     {
-        Network.InitializeServer(5, 25000, !Network.HavePublicAddress());
-        MasterServer.RegisterHost(typeName, gameName);
+        Debug.Log("yo");
+        //Network.InitializeServer(5, 25000, !Network.HavePublicAddress());
+        //MasterServer.RegisterHost(typeName, gameName);
     }
 
     void OnServerInitialized()
@@ -152,7 +160,7 @@ public class NetworkManager : MonoBehaviour
     {
         playerCount++;
         Debug.Log("Player " + playerCount + " connected from " + player.ipAddress + ":" + player.port);
-        if (playerCount == 2)
+        if (playerCount == 4)
         {
             for (int i = 0; i <= 50; i++)
             {

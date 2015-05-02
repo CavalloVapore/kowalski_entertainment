@@ -15,12 +15,11 @@ public class CharacterController : MonoBehaviour
 
     public Texture2D crosshair;
 
-    public Vector3 posNorth = new Vector3(0,0,0);
-    public Vector3 posEast = new Vector3(0, 0, 0);
-    public Vector3 posSouth = new Vector3(0, 0, 0);
-    public Vector3 posWest = new Vector3(0, 0, 0);
-
-    public SimpleMouseRotator smr; 
+    public Transform posNorth;
+    public Transform posEast;
+    public Transform posSouth;
+    public Transform posWest;
+    public SimpleMouseRotator smr;
 
     public GameObject projectilePrefab;
     public float spreadFactor;
@@ -34,9 +33,16 @@ public class CharacterController : MonoBehaviour
     Ray ray;
     RaycastHit hit;
 
+    public NetworkView nView;
+
     // Use this for initialization
     void Start()
     {
+        posNorth = GameObject.FindGameObjectWithTag("North").transform;
+        posSouth = GameObject.FindGameObjectWithTag("South").transform;
+        posEast = GameObject.FindGameObjectWithTag("East").transform;
+        posWest = GameObject.FindGameObjectWithTag("West").transform;
+
         myPosition = Position.NORTH;
         Switch();
         heat = 0;
@@ -48,9 +54,12 @@ public class CharacterController : MonoBehaviour
         atkSpeed = 0.2f;
         damage = 2;
 
-        GameObject.FindGameObjectWithTag("MainCamera").transform.position = this.transform.position;
-        GameObject.FindGameObjectWithTag("MainCamera").transform.rotation = this.transform.rotation;
-        GameObject.FindGameObjectWithTag("MainCamera").transform.parent = this.transform;
+        if (nView.isMine)
+        {
+            Camera.main.transform.position = this.transform.position;
+            Camera.main.transform.rotation = this.transform.rotation;
+            Camera.main.transform.parent = this.transform;
+        }
     }
 
     // Update is called once per frame
@@ -60,7 +69,7 @@ public class CharacterController : MonoBehaviour
 
         //ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width * 0.5f, Screen.height, 0f));
 
-        
+
 
 
         //Input
@@ -69,9 +78,9 @@ public class CharacterController : MonoBehaviour
         //Feuern
         if (Input.GetButton("Fire1") && !overheat && Time.time > (lastShot + atkSpeed))
         {
-                //Debug.Log("RATATA");
-                ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width * 0.5f + Random.Range(-spreadFactor * spread, spreadFactor * spread), Screen.height * 0.5f + Random.Range(-spreadFactor * spread, spreadFactor * spread), 0f));
-                Fire();
+            //Debug.Log("RATATA");
+            ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width * 0.5f + Random.Range(-spreadFactor * spread, spreadFactor * spread), Screen.height * 0.5f + Random.Range(-spreadFactor * spread, spreadFactor * spread), 0f));
+            Fire();
         }
         Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
         //Postionen Switchen
@@ -137,11 +146,10 @@ public class CharacterController : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             //Enemyhit
-            if(hit.collider.gameObject.tag == "Enemy")
+            if (hit.collider.gameObject.tag == "Enemy")
             {
                 //ENEMY LOSE LIFE
                 hit.collider.gameObject.GetComponent<EnemyUnit>().ReduceHealth(damage);
-                Debug.Log("Damage Given: " + damage);
             }
             //Debug.Log(hit.collider.gameObject.name);
         }
@@ -159,29 +167,29 @@ public class CharacterController : MonoBehaviour
         switch (myPosition)
         {
             case Position.NORTH:
-                transform.position = posNorth;
-                //smr.m_OriginalRotation = posNorth;
+                transform.position = posNorth.position;
+                smr.m_OriginalRotation = posNorth.rotation;
                 break;
             case Position.EAST:
-                transform.position = posEast;
-                //smr.m_OriginalRotation = posEast.rotation;
+                transform.position = posEast.position;
+                smr.m_OriginalRotation = posEast.rotation;
                 break;
             case Position.SOUTH:
-                transform.position = posSouth;
-                //smr.m_OriginalRotation = posSouth.rotation;
+                transform.position = posSouth.position;
+                smr.m_OriginalRotation = posSouth.rotation;
                 break;
             case Position.WEST:
-                transform.position = posWest;
-                //smr.m_OriginalRotation = posWest.rotation;
+                transform.position = posWest.position;
+                smr.m_OriginalRotation = posWest.rotation;
                 break;
         }
     }
 
-   /* void OnGUI()
-    {
-        float x = (Screen.width/2) - (crosshair.width/2);
-        float y = (Screen.height/2) - (crosshair.height/2);
-        GUI.DrawTexture(new Rect(x, y, crosshair.width, crosshair.height), crosshair);
-    }
-    * */
+    /* void OnGUI()
+     {
+         float x = (Screen.width/2) - (crosshair.width/2);
+         float y = (Screen.height/2) - (crosshair.height/2);
+         GUI.DrawTexture(new Rect(x, y, crosshair.width, crosshair.height), crosshair);
+     }
+     * */
 }
