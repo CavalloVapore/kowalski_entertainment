@@ -34,9 +34,16 @@ public class CharacterController : MonoBehaviour
     Ray ray;
     RaycastHit hit;
 
+    public NetworkView nView;
+
     // Use this for initialization
     void Start()
     {
+        posNorth = GameObject.FindGameObjectWithTag("North").transform;
+        posSouth = GameObject.FindGameObjectWithTag("South").transform;
+        posEast = GameObject.FindGameObjectWithTag("East").transform;
+        posWest = GameObject.FindGameObjectWithTag("West").transform;
+
         myPosition = Position.NORTH;
         Switch();
         heat = 0;
@@ -48,9 +55,12 @@ public class CharacterController : MonoBehaviour
         atkSpeed = 0.2f;
         damage = 2;
 
-        //GameObject.FindGameObjectWithTag("MainCamera").transform.position = this.transform.position;
-        //GameObject.FindGameObjectWithTag("MainCamera").transform.rotation = this.transform.rotation;
-        //GameObject.FindGameObjectWithTag("MainCamera").transform.parent = this.transform;
+        if (nView.isMine)
+        {
+            Camera.main.transform.position = this.transform.position;
+            Camera.main.transform.rotation = this.transform.rotation;
+            Camera.main.transform.parent = this.transform;
+        }
     }
 
     // Update is called once per frame
