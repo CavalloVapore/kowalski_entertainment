@@ -27,6 +27,7 @@ public class NetworkManager : MonoBehaviour
 
     public GameObject startButton;
     public GameObject joinButton;
+    public Canvas canvas;
 
     public GameObject AI;
 
@@ -60,9 +61,9 @@ public class NetworkManager : MonoBehaviour
 
     private void StartServer()
     {
-        Debug.Log("yo");
-        //Network.InitializeServer(5, 25000, !Network.HavePublicAddress());
-        //MasterServer.RegisterHost(typeName, gameName);
+        Network.InitializeServer(5, 25000, !Network.HavePublicAddress());
+        MasterServer.RegisterHost(typeName, gameName);
+        canvas.enabled = false;
     }
 
     void OnServerInitialized()
@@ -142,6 +143,7 @@ public class NetworkManager : MonoBehaviour
 
     private void JoinServer(HostData hostData)
     {
+        canvas.enabled = false;
         Network.Connect(hostData);
     }
 
