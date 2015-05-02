@@ -48,9 +48,9 @@ public class CharacterController : MonoBehaviour
         atkSpeed = 0.2f;
         damage = 2;
 
-        GameObject.FindGameObjectWithTag("MainCamera").transform.position = this.transform.position;
-        GameObject.FindGameObjectWithTag("MainCamera").transform.rotation = this.transform.rotation;
-        GameObject.FindGameObjectWithTag("MainCamera").transform.parent = this.transform;
+        //GameObject.FindGameObjectWithTag("MainCamera").transform.position = this.transform.position;
+        //GameObject.FindGameObjectWithTag("MainCamera").transform.rotation = this.transform.rotation;
+        //GameObject.FindGameObjectWithTag("MainCamera").transform.parent = this.transform;
     }
 
     // Update is called once per frame
@@ -141,7 +141,6 @@ public class CharacterController : MonoBehaviour
             {
                 //ENEMY LOSE LIFE
                 hit.collider.gameObject.GetComponent<EnemyUnit>().ReduceHealth(damage);
-                Debug.Log("Damage Given: " + damage);
             }
             //Debug.Log(hit.collider.gameObject.name);
         }

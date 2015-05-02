@@ -7,16 +7,14 @@ public class UnitsUI : MonoBehaviour {
     private Transform target;
     private GameObject mainCamera;
     private Slider healthbar;
-    private Enemy enemyUnit = new Enemy();
 
     void Start()
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 
-        enemyUnit = gameObject.GetComponentInParent<EnemyUnit>().enemyUnit;
         healthbar = gameObject.GetComponentInChildren<Slider>();
-        healthbar.maxValue = enemyUnit.enemyHealth;
-        healthbar.value = enemyUnit.enemyHealth;
+        healthbar.maxValue = gameObject.GetComponentInParent<EnemyUnit>().maxHealth;
+        healthbar.value = gameObject.GetComponentInParent<EnemyUnit>().getHealth();
         if (mainCamera)
             target = mainCamera.transform;
         else
@@ -26,6 +24,6 @@ public class UnitsUI : MonoBehaviour {
     void LateUpdate()
     {
         transform.LookAt(target);
-        healthbar.value = enemyUnit.enemyHealth;
+        healthbar.value = gameObject.GetComponentInParent<EnemyUnit>().getHealth();
     }    
 }
