@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         if (GetComponent<NetworkView>().isMine)
         {
             InputMovement();
-            //InputColorChange();
+            InputColorChange();
         }
         else
         {
@@ -85,6 +85,7 @@ public class Player : MonoBehaviour
 
     public void InputColorChange()
     {
+        if (Input.GetKey(KeyCode.R))
         ChangeColorTo(new Vector3(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f)));
     }
 

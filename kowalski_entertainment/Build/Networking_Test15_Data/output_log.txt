@@ -14,18 +14,30 @@ Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainm
 Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test15_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test15_Data\Managed\UnityEngine.UI.dll (this message is harmless)
 Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test15_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.062 seconds
+- Completed reload, in  0.058 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
 Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test15_Data\Managed\System.Core.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1f48 -> priority: 1 
-  Thread -> id: 864 -> priority: 1 
+  Thread -> id: a28 -> priority: 1 
+  Thread -> id: 11b0 -> priority: 1 
 Received pong from 25.90.224.157:25000
  
 (Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Received pong from 131.159.194.154:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Received pong from 25.90.224.157:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Failed to connect. This is caused by an incorrect parameters, internal error or too many existing connections.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 336)
 
 Received pong from 131.159.194.154:25000
  
