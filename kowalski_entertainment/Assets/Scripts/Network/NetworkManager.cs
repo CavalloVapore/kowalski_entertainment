@@ -43,11 +43,11 @@ public class NetworkManager : MonoBehaviour
         //if (GUI.Button(new Rect(100, 250, 250, 100), "Refresh Hosts"))
         joinButton.GetComponent<Button>().onClick.AddListener(() => { RefreshHostList(); });
     }
+
     void OnGUI()
     {
         if (!Network.isClient && !Network.isServer)
         {
-
             if (hostList != null)
             {
                 for (int i = 0; i < hostList.Length; i++)
@@ -63,7 +63,10 @@ public class NetworkManager : MonoBehaviour
     {
         Network.InitializeServer(5, 25000, !Network.HavePublicAddress());
         MasterServer.RegisterHost(typeName, gameName);
+<<<<<<< HEAD
+=======
         canvas.enabled = false;
+>>>>>>> 8e16a6f043de5031ec4400f17326a1c4ccee02ca
     }
 
     void OnServerInitialized()
