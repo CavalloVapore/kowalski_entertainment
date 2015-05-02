@@ -54,6 +54,6 @@ public class EnemyUnit : MonoBehaviour
 
     public void ReduceHealth (int damage)
     {
-        this.enemyUnit.enemyHealth -= damage;
+        enemyUnit.enemyHealth -= damage;
     }
 }

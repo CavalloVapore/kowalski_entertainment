@@ -21,6 +21,7 @@ public class EnemyDatabase : MonoBehaviour
         enemy.Add(new Enemy("EnemyLV4", 3, "Tank", Enemy.EnemyType.Tank, 1000, 2, 2,20,3,2));
         enemy.Add(new Enemy("EnemyLV5", 4, "Plane", Enemy.EnemyType.Tank, 100, 20, 1,120,20,20));
 
+        
         for(int i = 0; i < enemy.Count; i++)
         {
             enemy[i].LoadGameObject();
