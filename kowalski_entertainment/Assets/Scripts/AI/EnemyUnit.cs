@@ -7,6 +7,8 @@ public class EnemyUnit : MonoBehaviour
     private int enemyHealth;
     public int maxHealth;
 
+    public NetworkView nView;
+
     public enum EnemyType
     {
         Vehicle,
@@ -26,14 +28,38 @@ public class EnemyUnit : MonoBehaviour
         if (enemyHealth <= 0)
         {
             //Debug.Log(enemyUnit.enemyHealth);
+            Debug.Log(nView.owner);
+            Network.RemoveRPCs(nView.viewID);
             Network.Destroy(gameObject);
         }
 	}
 
     public void ReduceHealth (int damage)
     {
-        enemyHealth -= damage;
+        enemyHealth -= 1;
+        //syncHealth(enemyHealth);
     }
+
+    /*[RPC]
+    public void syncHealth(int health)
+    {
+        nView.RPC("syncHealth", RPCMode.OthersBuffered, enemyHealth);
+    }*/
+
+    /*void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
+    {
+        int syncHealth = enemyHealth;
+        if (stream.isWriting)
+        {
+            syncHealth = enemyHealth;
+            stream.Serialize(ref syncHealth);
+        }
+        else
+        {
+            stream.Serialize(ref syncHealth);
+            enemyHealth = syncHealth;
+        }
+    }*/
 
     public int getHealth()
     {
