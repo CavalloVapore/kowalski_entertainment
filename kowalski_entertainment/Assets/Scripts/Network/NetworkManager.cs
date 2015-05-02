@@ -10,13 +10,25 @@ public class NetworkManager : MonoBehaviour
     private HostData[] hostList;
 
     public GameObject playerPrefab;
-    public GameObject playerPrefab2;
 
     public Transform spawn1;
 
     private int playerCount = 1;
+    public Transform spawnPoint1;
+    public Transform spawnPoint2;
+    public Transform spawnPoint3;
+    public Transform spawnPoint4;
+    public Transform spawnPoint5;
+    public Transform spawnPoint6;
+    public Transform spawnPoint7;
+    public Transform spawnPoint8;
+    public Transform spawnPoint9;
+    public Transform spawnPoint10;
 
-    public bool[] hatches;
+    public GameObject AI;
+
+    private int count = 0;
+    private int random;
 
     void OnGUI()
     {
@@ -84,8 +96,53 @@ public class NetworkManager : MonoBehaviour
     private void SpawnPlayer()
     {
         Network.Instantiate(playerPrefab, spawn1.position, Quaternion.identity, 0);
-        for (int i = 0; i <= 100; i++ )
-            Network.Instantiate(playerPrefab2, spawn1.position + new Vector3(Random.Range(0, 5), Random.Range(0, 5), Random.Range(0, 5)), Quaternion.identity, 0);
+        for (int i = 0; i <= 50; i++)
+        {
+            random = Random.Range(0, 10);
+
+            switch (random)
+            {
+                case (1):
+                    Instantiate(AI, spawnPoint1.position, Quaternion.identity);
+                    break;
+
+                case (2):
+                    Instantiate(AI, spawnPoint2.position, Quaternion.identity);
+                    break;
+
+                case (3):
+                    Instantiate(AI, spawnPoint3.position, Quaternion.identity);
+                    break;
+
+                case (4):
+                    Instantiate(AI, spawnPoint4.position, Quaternion.identity);
+                    break;
+
+                case (5):
+                    Instantiate(AI, spawnPoint5.position, Quaternion.identity);
+                    break;
+
+                case (6):
+                    Instantiate(AI, spawnPoint6.position, Quaternion.identity);
+                    break;
+
+                case (7):
+                    Instantiate(AI, spawnPoint7.position, Quaternion.identity);
+                    break;
+
+                case (8):
+                    Instantiate(AI, spawnPoint8.position, Quaternion.identity);
+                    break;
+
+                case (9):
+                    Instantiate(AI, spawnPoint9.position, Quaternion.identity);
+                    break;
+
+                case (10):
+                    Instantiate(AI, spawnPoint10.position, Quaternion.identity);
+                    break;
+            }
+        }
     }
 
     private void OnPlayerConnected(NetworkPlayer player)
