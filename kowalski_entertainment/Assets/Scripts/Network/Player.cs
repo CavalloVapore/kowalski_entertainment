@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
     public float speed = 10f;
     public float rotSpeed = 10f;
 
+    public int player;
+
     private float lastSynchronizationTime = 0f;
     private float syncDelay = 0f;
     private float syncTime = 0f;
@@ -13,6 +15,7 @@ public class Player : MonoBehaviour
     private Vector3 syncEndPosition = Vector3.zero;
     private Vector3 syncStartRotation = Vector3.zero;
     private Vector3 syncEndRotation = Vector3.zero;
+    private NetworkView nView;
 
     void OnSerializeNetworkView(BitStream stream, NetworkMessageInfo info)
     {
@@ -43,19 +46,15 @@ public class Player : MonoBehaviour
         }
     }
 
-    void start()
-    {
-        InputColorChange();
-    }
-
     void Awake()
     {
         lastSynchronizationTime = Time.time;
+        nView = GetComponent<NetworkView>();
     }
 
     void Update()
     {
-        if (GetComponent<NetworkView>().isMine)
+        if (nView.isMine)
         {
             InputMovement();
             InputColorChange();
@@ -69,17 +68,17 @@ public class Player : MonoBehaviour
 
     private void InputMovement()
     {
-        if (Input.GetKey(KeyCode.W))
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        if (Input.GetKey(KeyCode.Keypad1))
+            GetComponent<CharacterController>().setPosition(1);
 
-        if (Input.GetKey(KeyCode.S))
-            transform.Translate(Vector3.back * Time.deltaTime * speed);
+        if (Input.GetKey(KeyCode.Keypad2))
+            transform.Translate(Vector3.back * Time.deltaTime * speed, Space.World);
 
-        if (Input.GetKey(KeyCode.D))
-            transform.Translate(Vector3.right * Time.deltaTime * speed);
+        if (Input.GetKey(KeyCode.Keypad3))
+            transform.Translate(Vector3.right * Time.deltaTime * speed, Space.World);
 
-        if (Input.GetKey(KeyCode.A))
-            transform.Translate(Vector3.left * Time.deltaTime * speed);
+        if (Input.GetKey(KeyCode.Keypad4))
+            transform.Translate(Vector3.left * Time.deltaTime * speed, Space.World);
 
         if (Input.GetKey(KeyCode.Q))
             transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rotSpeed, Space.World);
@@ -106,7 +105,10 @@ public class Player : MonoBehaviour
     {
         GetComponent<Renderer>().material.color = new Color(color.x, color.y, color.z, 1f);
 
-        if (GetComponent<NetworkView>().isMine)
-            GetComponent<NetworkView>().RPC("ChangeColorTo", RPCMode.OthersBuffered, color);
+        if (nView.isMine)
+            nView.RPC("ChangeColorTo", RPCMode.OthersBuffered, color);
     }
+
+
+
 }
