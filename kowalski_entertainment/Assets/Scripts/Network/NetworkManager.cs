@@ -103,43 +103,43 @@ public class NetworkManager : MonoBehaviour
             switch (random)
             {
                 case (1):
-                    Network.Instantiate(AI, spawnPoint1.position, Quaternion.identity, 1);
+                    Instantiate(AI, spawnPoint1.position, Quaternion.identity);
                     break;
 
                 case (2):
-                    Network.Instantiate(AI, spawnPoint2.position, Quaternion.identity, 1);
+                    Instantiate(AI, spawnPoint2.position, Quaternion.identity);
                     break;
 
                 case (3):
-                    Network.Instantiate(AI, spawnPoint3.position, Quaternion.identity, 1);
+                    Instantiate(AI, spawnPoint3.position, Quaternion.identity);
                     break;
 
                 case (4):
-                    Network.Instantiate(AI, spawnPoint4.position, Quaternion.identity, 1);
+                    Instantiate(AI, spawnPoint4.position, Quaternion.identity);
                     break;
 
                 case (5):
-                    Network.Instantiate(AI, spawnPoint5.position, Quaternion.identity, 1);
+                    Instantiate(AI, spawnPoint5.position, Quaternion.identity);
                     break;
 
                 case (6):
-                    Network.Instantiate(AI, spawnPoint6.position, Quaternion.identity, 1);
+                    Instantiate(AI, spawnPoint6.position, Quaternion.identity);
                     break;
 
                 case (7):
-                    Network.Instantiate(AI, spawnPoint7.position, Quaternion.identity, 1);
+                    Instantiate(AI, spawnPoint7.position, Quaternion.identity);
                     break;
 
                 case (8):
-                    Network.Instantiate(AI, spawnPoint8.position, Quaternion.identity, 1);
+                    Instantiate(AI, spawnPoint8.position, Quaternion.identity);
                     break;
 
                 case (9):
-                    Network.Instantiate(AI, spawnPoint9.position, Quaternion.identity, 1);
+                    Instantiate(AI, spawnPoint9.position, Quaternion.identity);
                     break;
 
                 case (10):
-                    Network.Instantiate(AI, spawnPoint10.position, Quaternion.identity, 1);
+                    Instantiate(AI, spawnPoint10.position, Quaternion.identity);
                     break;
             }
         }
