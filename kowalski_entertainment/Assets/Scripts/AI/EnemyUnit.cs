@@ -3,7 +3,7 @@ using System.Collections;
 
 public class EnemyUnit : MonoBehaviour 
 {
-    private Enemy enemyUnit = new Enemy();
+    public Enemy enemyUnit = new Enemy();
     private string saveName;
     private EnemyDatabase database;
 
@@ -42,7 +42,8 @@ public class EnemyUnit : MonoBehaviour
     {
         if (enemyUnit.enemyHealth <= 0)
         {
-            Network.Destroy(gameObject);
+            Debug.Log(enemyUnit.enemyHealth);
+            //Network.Destroy(gameObject);
         }
 	}
 

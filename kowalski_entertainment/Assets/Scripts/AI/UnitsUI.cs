@@ -13,9 +13,10 @@ public class UnitsUI : MonoBehaviour {
     {
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 
-        enemyUnit = gameObject.GetComponentInParent<Enemy>();
+        enemyUnit = gameObject.GetComponentInParent<EnemyUnit>().enemyUnit;
         healthbar = gameObject.GetComponentInChildren<Slider>();
         healthbar.maxValue = enemyUnit.enemyHealth;
+        healthbar.value = enemyUnit.enemyHealth;
         if (mainCamera)
             target = mainCamera.transform;
         else

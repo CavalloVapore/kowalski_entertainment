@@ -72,7 +72,7 @@ public class NetworkManager : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            for (int i = 0; i <= 50; i++)
+            for (int i = 0; i <= 5; i++)
             {
                 random = Random.Range(0, 10);
 
