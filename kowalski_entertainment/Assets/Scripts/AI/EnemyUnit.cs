@@ -40,7 +40,10 @@ public class EnemyUnit : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-	
+        if (enemyUnit.enemyHealth <= 0)
+        {
+            Network.Destroy(gameObject);
+        }
 	}
 
     public void ReduceHealth (int damage)
