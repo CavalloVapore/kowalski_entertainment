@@ -14,7 +14,7 @@ public class SpinThatShit : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        myRot = chooseRotation.x;
+
 	}
 	
 	// Update is called once per frame
