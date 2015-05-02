@@ -4,30 +4,35 @@ Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
     Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
     Vendor:   Intel
-    VRAM:     128 MB
+    VRAM:     896 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: D:\MyDocuments\Git\GameJam\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading D:\MyDocuments\Git\GameJam\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: D:\MyDocuments\Git\GameJam\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading D:\MyDocuments\Git\GameJam\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: D:\MyDocuments\Git\GameJam\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading D:\MyDocuments\Git\GameJam\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: D:\MyDocuments\Git\GameJam\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading D:\MyDocuments\Git\GameJam\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.047 seconds
+Platform assembly: C:\Users\Cedric\Desktop\Kowalski\Kowalski\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Cedric\Desktop\Kowalski\Kowalski\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Cedric\Desktop\Kowalski\Kowalski\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Cedric\Desktop\Kowalski\Kowalski\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Cedric\Desktop\Kowalski\Kowalski\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Cedric\Desktop\Kowalski\Kowalski\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Cedric\Desktop\Kowalski\Kowalski\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Cedric\Desktop\Kowalski\Kowalski\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.042 seconds
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-Platform assembly: D:\MyDocuments\Git\GameJam\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: D:\MyDocuments\Git\GameJam\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Cedric\Desktop\Kowalski\Kowalski\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Cedric\Desktop\Kowalski\Kowalski\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test42_Data\Managed\System.dll (this message is harmless)
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1894 -> priority: 1 
-  Thread -> id: 1b18 -> priority: 1 
-Player 2 connected from 131.159.211.96:59737
-UnityEngine.Debug:Internal_Log(Int32, String, Object)
-UnityEngine.Debug:Log(Object)
-NetworkManager:OnPlayerConnected(NetworkPlayer) (at D:\MyDocuments\Git\GameJam\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\NetworkManager.cs:154)
+  Thread -> id: 13824 -> priority: 1 
+  Thread -> id: 13828 -> priority: 1 
+View ID AllocatedID: 330 not found during lookup. Strange behaviour may occur
  
-(Filename: D:/MyDocuments/Git/GameJam/kowalski_entertainment/kowalski_entertainment/Assets/Scripts/Network/NetworkManager.cs Line: 154)
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 1690)
+
+Received state update for view id' AllocatedID: 330' but the NetworkView doesn't exist
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 2483)
+
+The server has disconnected from the client. Most likely the server has shut down.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 754)
 
