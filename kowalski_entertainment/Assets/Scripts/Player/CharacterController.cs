@@ -71,22 +71,27 @@ public class CharacterController : MonoBehaviour
         }
         Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
         //Postionen Switchen
-        //Switch Rechts
 
-        if (Input.GetButtonDown("SwitchRechts"))
+        if (Input.GetButtonDown("North"))
         {
-            myPosition = (Position)(((int)myPosition + 1) % 4);
+            myPosition = Position.NORTH;
             Switch();
         }
-        //Switch Links
-        if (Input.GetButtonDown("SwitchLinks"))
+        if (Input.GetButtonDown("East"))
         {
-            myPosition = (Position)(((int)myPosition - 1) % 4);
+            myPosition = Position.EAST;
             Switch();
         }
-
-
-
+        if (Input.GetButtonDown("South"))
+        {
+            myPosition = Position.SOUTH;
+            Switch();
+        }
+        if (Input.GetButtonDown("West"))
+        {
+            myPosition = Position.WEST;
+            Switch();
+        }
     }
 
     void FixedUpdate()
@@ -161,10 +166,8 @@ public class CharacterController : MonoBehaviour
                 smr.m_OriginalRotation = posSouth.rotation;
                 break;
             case Position.WEST:
-
                 transform.position = posWest.position;
                 smr.m_OriginalRotation = posWest.rotation;
-
                 break;
         }
     }
