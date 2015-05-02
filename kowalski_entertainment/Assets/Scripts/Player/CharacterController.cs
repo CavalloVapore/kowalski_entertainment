@@ -19,7 +19,6 @@ public class CharacterController : MonoBehaviour
     public Transform posEast;
     public Transform posSouth;
     public Transform posWest;
-
     public SimpleMouseRotator smr;
 
     public GameObject projectilePrefab;
