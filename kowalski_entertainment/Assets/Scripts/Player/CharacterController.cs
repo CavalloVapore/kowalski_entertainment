@@ -46,7 +46,6 @@ public class CharacterController : MonoBehaviour
 
 
         myPosition = Position.NORTH;
-        Switch();
         heat = 0;
         heatInc = 10;
         heatDec = 0.5f;
@@ -61,6 +60,7 @@ public class CharacterController : MonoBehaviour
         posSouth = GameObject.FindGameObjectWithTag("South").transform;
         posEast = GameObject.FindGameObjectWithTag("East").transform;
         posWest = GameObject.FindGameObjectWithTag("West").transform;
+        Switch();
 
         if (nView.isMine)
         {
