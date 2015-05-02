@@ -15,10 +15,10 @@ public class CharacterController : MonoBehaviour
 
     public Texture2D crosshair;
 
-    public Vector3 posNorth = new Vector3(0,0,0);
-    public Vector3 posEast = new Vector3(0, 0, 0);
-    public Vector3 posSouth = new Vector3(0, 0, 0);
-    public Vector3 posWest = new Vector3(0, 0, 0);
+    public Transform posNorth;
+    public Transform posEast;
+    public Transform posSouth;
+    public Transform posWest;
 
     public SimpleMouseRotator smr; 
 
@@ -158,20 +158,20 @@ public class CharacterController : MonoBehaviour
         switch (myPosition)
         {
             case Position.NORTH:
-                transform.position = posNorth;
-                //smr.m_OriginalRotation = posNorth;
+                transform.position = posNorth.position;
+                smr.m_OriginalRotation = posNorth.rotation;
                 break;
             case Position.EAST:
-                transform.position = posEast;
-                //smr.m_OriginalRotation = posEast.rotation;
+                transform.position = posEast.position;
+                smr.m_OriginalRotation = posEast.rotation;
                 break;
             case Position.SOUTH:
-                transform.position = posSouth;
-                //smr.m_OriginalRotation = posSouth.rotation;
+                transform.position = posSouth.position;
+                smr.m_OriginalRotation = posSouth.rotation;
                 break;
             case Position.WEST:
-                transform.position = posWest;
-                //smr.m_OriginalRotation = posWest.rotation;
+                transform.position = posWest.position;
+                smr.m_OriginalRotation = posWest.rotation;
                 break;
         }
     }
