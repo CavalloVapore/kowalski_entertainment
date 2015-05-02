@@ -75,16 +75,16 @@ public class Player : MonoBehaviour
     private void InputMovement()
     {
         if (Input.GetKey(KeyCode.W))
-            transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.World);
+            transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
         if (Input.GetKey(KeyCode.S))
-            transform.Translate(Vector3.back * Time.deltaTime * speed, Space.World);
+            transform.Translate(Vector3.back * Time.deltaTime * speed);
 
         if (Input.GetKey(KeyCode.D))
-            transform.Translate(Vector3.right * Time.deltaTime * speed, Space.World);
+            transform.Translate(Vector3.right * Time.deltaTime * speed);
 
         if (Input.GetKey(KeyCode.A))
-            transform.Translate(Vector3.left * Time.deltaTime * speed, Space.World);
+            transform.Translate(Vector3.left * Time.deltaTime * speed);
 
         if (Input.GetKey(KeyCode.E))
             transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rotSpeed, Space.World);
