@@ -1,36 +1,60 @@
 fileFormatVersion: 2
-guid: c0ab0dd49dd8b5641b3e18b208d29a41
-timeCreated: 1430499235
+guid: d9eb8baa13f3dca49a9f969673700601
+timeCreated: 1430603574
 licenseType: Pro
 ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
-    100000: bone_horz
-    100002: bone_vert
-    100004: //RootNode
-    100006: searchlight_base
-    100008: searchlight_rotpart
-    100010: searchlight_vert_part
-    100012: light_ignore
-    400000: bone_horz
-    400002: bone_vert
-    400004: //RootNode
-    400006: searchlight_base
-    400008: searchlight_rotpart
-    400010: searchlight_vert_part
-    400012: light_ignore
-    2300000: searchlight_base
-    2300002: searchlight_rotpart
-    2300004: searchlight_vert_part
-    2300006: light_ignore
-    3300000: searchlight_base
-    3300002: searchlight_rotpart
-    3300004: searchlight_vert_part
-    3300006: light_ignore
-    4300000: searchlight_base
-    4300002: searchlight_rotpart
-    4300004: searchlight_vert_part
-    4300006: light_ignore
+    100000: AL_Jeep_Chassis
+    100002: AL_Jeep_Tire_br
+    100004: AL_Jeep_Tire_fl
+    100006: Bone01
+    100008: Bone02
+    100010: Bone03
+    100012: //RootNode
+    100014: WRECK
+    100016: WRECK 1
+    100018: WRECK_FLY1
+    100020: WRECK_FLY2
+    100022: WRECK_FLY3
+    100024: WRECK_FLY4
+    400000: AL_Jeep_Chassis
+    400002: AL_Jeep_Tire_br
+    400004: AL_Jeep_Tire_fl
+    400006: Bone01
+    400008: Bone02
+    400010: Bone03
+    400012: //RootNode
+    400014: WRECK
+    400016: WRECK 1
+    400018: WRECK_FLY1
+    400020: WRECK_FLY2
+    400022: WRECK_FLY3
+    400024: WRECK_FLY4
+    2300000: AL_Jeep_Chassis
+    2300002: AL_Jeep_Tire_br
+    2300004: AL_Jeep_Tire_fl
+    2300006: WRECK 1
+    2300008: WRECK_FLY1
+    2300010: WRECK_FLY2
+    2300012: WRECK_FLY3
+    2300014: WRECK_FLY4
+    3300000: AL_Jeep_Chassis
+    3300002: AL_Jeep_Tire_br
+    3300004: AL_Jeep_Tire_fl
+    3300006: WRECK 1
+    3300008: WRECK_FLY1
+    3300010: WRECK_FLY2
+    3300012: WRECK_FLY3
+    3300014: WRECK_FLY4
+    4300000: AL_Jeep_Tire_fl
+    4300002: AL_Jeep_Tire_br
+    4300004: AL_Jeep_Chassis
+    4300006: WRECK_FLY1
+    4300008: WRECK_FLY2
+    4300010: WRECK_FLY3
+    4300012: WRECK_FLY4
+    4300014: WRECK
     7400000: Take 001
     9500000: //RootNode
   materials:
@@ -42,7 +66,7 @@ ModelImporter:
     bakeSimulation: 0
     optimizeGameObjects: 0
     motionNodeName: 
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -53,7 +77,7 @@ ModelImporter:
       name: Take 001
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 400
+      lastFrame: 100
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -75,15 +99,29 @@ ModelImporter:
       transformMask:
       - path: 
         weight: 1
-      - path: bone_horz
+      - path: Bone01
         weight: 1
-      - path: bone_horz/bone_vert
+      - path: Bone01/AL_Jeep_Tire_fl
         weight: 1
-      - path: bone_horz/bone_vert/searchlight_vert_part
+      - path: Bone02
         weight: 1
-      - path: bone_horz/searchlight_rotpart
+      - path: Bone02/AL_Jeep_Tire_br
         weight: 1
-      - path: searchlight_base
+      - path: Bone03
+        weight: 1
+      - path: Bone03/AL_Jeep_Chassis
+        weight: 1
+      - path: WRECK
+        weight: 1
+      - path: WRECK/WRECK 1
+        weight: 1
+      - path: WRECK/WRECK_FLY1
+        weight: 1
+      - path: WRECK/WRECK_FLY2
+        weight: 1
+      - path: WRECK/WRECK_FLY3
+        weight: 1
+      - path: WRECK/WRECK_FLY4
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
