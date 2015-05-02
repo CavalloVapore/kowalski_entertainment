@@ -68,8 +68,8 @@ public class Player : MonoBehaviour
 
     private void InputMovement()
     {
-        if (Input.GetKey(KeyCode.Keypad1))
-            GetComponent<CharacterController>().setPosition(1);
+        //if (Input.GetKey(KeyCode.Keypad1))
+        //    GetComponent<CharacterController>().setPosition(1);
 
         if (Input.GetKey(KeyCode.Keypad2))
             transform.Translate(Vector3.back * Time.deltaTime * speed, Space.World);
