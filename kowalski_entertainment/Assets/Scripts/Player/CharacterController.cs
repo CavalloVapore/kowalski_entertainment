@@ -22,6 +22,7 @@ public class CharacterController : MonoBehaviour
     public SimpleMouseRotator smr;
 
     public GameObject projectilePrefab;
+    public GameObject tracer;
     public float spreadFactor;
     private float spread;
     private float spreadInc;
@@ -30,6 +31,10 @@ public class CharacterController : MonoBehaviour
     private int damage;
     private float atkSpeed;
     private float lastShot;
+
+    private LineRenderer lr;
+
+    private Vector3 hitPos;
     Ray ray;
     RaycastHit hit;
 
@@ -38,10 +43,7 @@ public class CharacterController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        posNorth = GameObject.FindGameObjectWithTag("North").transform;
-        posSouth = GameObject.FindGameObjectWithTag("South").transform;
-        posEast = GameObject.FindGameObjectWithTag("East").transform;
-        posWest = GameObject.FindGameObjectWithTag("West").transform;
+
 
         myPosition = Position.NORTH;
         Switch();
@@ -53,6 +55,12 @@ public class CharacterController : MonoBehaviour
         spreadDec = 0.1f;
         atkSpeed = 0.2f;
         damage = 2;
+        lr = GetComponent<LineRenderer>();
+
+        posNorth = GameObject.FindGameObjectWithTag("North").transform;
+        posSouth = GameObject.FindGameObjectWithTag("South").transform;
+        posEast = GameObject.FindGameObjectWithTag("East").transform;
+        posWest = GameObject.FindGameObjectWithTag("West").transform;
 
         if (nView.isMine)
         {
@@ -69,9 +77,6 @@ public class CharacterController : MonoBehaviour
 
         //ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width * 0.5f, Screen.height, 0f));
 
-
-
-
         //Input
 
 
@@ -79,10 +84,12 @@ public class CharacterController : MonoBehaviour
         if (Input.GetButton("Fire1") && !overheat && Time.time > (lastShot + atkSpeed))
         {
             //Debug.Log("RATATA");
+            //Debug.Log(lastShot);
             ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width * 0.5f + Random.Range(-spreadFactor * spread, spreadFactor * spread), Screen.height * 0.5f + Random.Range(-spreadFactor * spread, spreadFactor * spread), 0f));
             Fire();
         }
-        Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+        //Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
+
         //Postionen Switchen
 
         if (Input.GetButtonDown("North"))
@@ -141,10 +148,12 @@ public class CharacterController : MonoBehaviour
 
     void Fire()
     {
-
+        
+        
         //Fire
         if (Physics.Raycast(ray, out hit))
         {
+            hitPos = hit.transform.position;
             //Enemyhit
             if (hit.collider.gameObject.tag == "Enemy")
             {
@@ -153,6 +162,14 @@ public class CharacterController : MonoBehaviour
             }
             //Debug.Log(hit.collider.gameObject.name);
         }
+        else
+        {
+            hitPos = ray.origin + ray.direction * 50;
+        }
+
+        GameObject temp = (GameObject)Instantiate(tracer);
+        temp.GetComponent<LineRenderer>().SetPosition(0, ray.origin + ray.direction * 2);
+        temp.GetComponent<LineRenderer>().SetPosition(1, hitPos);
         //Heat
         heat = Mathf.Min((heat + heatInc), 100);
         //Spread
@@ -185,11 +202,11 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    /* void OnGUI()
+     void OnGUI()
      {
          float x = (Screen.width/2) - (crosshair.width/2);
          float y = (Screen.height/2) - (crosshair.height/2);
          GUI.DrawTexture(new Rect(x, y, crosshair.width, crosshair.height), crosshair);
      }
-     * */
+     
 }
