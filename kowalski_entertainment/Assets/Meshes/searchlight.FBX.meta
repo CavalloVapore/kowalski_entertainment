@@ -11,21 +11,26 @@ ModelImporter:
     100006: searchlight_base
     100008: searchlight_rotpart
     100010: searchlight_vert_part
+    100012: light_ignore
     400000: bone_horz
     400002: bone_vert
     400004: //RootNode
     400006: searchlight_base
     400008: searchlight_rotpart
     400010: searchlight_vert_part
+    400012: light_ignore
     2300000: searchlight_base
     2300002: searchlight_rotpart
     2300004: searchlight_vert_part
+    2300006: light_ignore
     3300000: searchlight_base
     3300002: searchlight_rotpart
     3300004: searchlight_vert_part
+    3300006: light_ignore
     4300000: searchlight_base
     4300002: searchlight_rotpart
     4300004: searchlight_vert_part
+    4300006: light_ignore
     7400000: Take 001
     9500000: //RootNode
   materials:
