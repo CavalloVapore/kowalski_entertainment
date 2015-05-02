@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: d9eb8baa13f3dca49a9f969673700601
+timeCreated: 1430603574
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: AL_Jeep_Chassis
+    100002: AL_Jeep_Tire_br
+    100004: AL_Jeep_Tire_fl
+    100006: Bone01
+    100008: Bone02
+    100010: Bone03
+    100012: //RootNode
+    100014: WRECK
+    100016: WRECK 1
+    100018: WRECK_FLY1
+    100020: WRECK_FLY2
+    100022: WRECK_FLY3
+    100024: WRECK_FLY4
+    400000: AL_Jeep_Chassis
+    400002: AL_Jeep_Tire_br
+    400004: AL_Jeep_Tire_fl
+    400006: Bone01
+    400008: Bone02
+    400010: Bone03
+    400012: //RootNode
+    400014: WRECK
+    400016: WRECK 1
+    400018: WRECK_FLY1
+    400020: WRECK_FLY2
+    400022: WRECK_FLY3
+    400024: WRECK_FLY4
+    2300000: AL_Jeep_Chassis
+    2300002: AL_Jeep_Tire_br
+    2300004: AL_Jeep_Tire_fl
+    2300006: WRECK 1
+    2300008: WRECK_FLY1
+    2300010: WRECK_FLY2
+    2300012: WRECK_FLY3
+    2300014: WRECK_FLY4
+    3300000: AL_Jeep_Chassis
+    3300002: AL_Jeep_Tire_br
+    3300004: AL_Jeep_Tire_fl
+    3300006: WRECK 1
+    3300008: WRECK_FLY1
+    3300010: WRECK_FLY2
+    3300012: WRECK_FLY3
+    3300014: WRECK_FLY4
+    4300000: AL_Jeep_Tire_fl
+    4300002: AL_Jeep_Tire_br
+    4300004: AL_Jeep_Chassis
+    4300006: WRECK_FLY1
+    4300008: WRECK_FLY2
+    4300010: WRECK_FLY3
+    4300012: WRECK_FLY4
+    4300014: WRECK
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Bone01
+        weight: 1
+      - path: Bone01/AL_Jeep_Tire_fl
+        weight: 1
+      - path: Bone02
+        weight: 1
+      - path: Bone02/AL_Jeep_Tire_br
+        weight: 1
+      - path: Bone03
+        weight: 1
+      - path: Bone03/AL_Jeep_Chassis
+        weight: 1
+      - path: WRECK
+        weight: 1
+      - path: WRECK/WRECK 1
+        weight: 1
+      - path: WRECK/WRECK_FLY1
+        weight: 1
+      - path: WRECK/WRECK_FLY2
+        weight: 1
+      - path: WRECK/WRECK_FLY3
+        weight: 1
+      - path: WRECK/WRECK_FLY4
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
