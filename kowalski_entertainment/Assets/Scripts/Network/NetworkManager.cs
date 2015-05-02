@@ -152,7 +152,7 @@ public class NetworkManager : MonoBehaviour
     {
         playerCount++;
         Debug.Log("Player " + playerCount + " connected from " + player.ipAddress + ":" + player.port);
-        if (playerCount == 2)
+        if (playerCount == 4)
         {
             for (int i = 0; i <= 50; i++)
             {
