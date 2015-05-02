@@ -22,8 +22,6 @@ public class NetworkManager : MonoBehaviour
     public Transform spawnPoint6;
     public Transform spawnPoint7;
     public Transform spawnPoint8;
-    public Transform spawnPoint9;
-    public Transform spawnPoint10;
 
     public GameObject startButton;
     public GameObject joinButton;
@@ -118,14 +116,6 @@ public class NetworkManager : MonoBehaviour
                     case (8):
                         Network.Instantiate(AI, spawnPoint8.position, Quaternion.identity, 0);
                         break;
-
-                    case (9):
-                        Network.Instantiate(AI, spawnPoint9.position, Quaternion.identity, 0);
-                        break;
-
-                    case (10):
-                        Network.Instantiate(AI, spawnPoint10.position, Quaternion.identity, 0);
-                        break;
                 }
             }
         }
@@ -162,55 +152,5 @@ public class NetworkManager : MonoBehaviour
     {
         playerCount++;
         Debug.Log("Player " + playerCount + " connected from " + player.ipAddress + ":" + player.port);
-        if (playerCount == 4)
-        {
-            for (int i = 0; i <= 50; i++)
-            {
-                random = Random.Range(0, 10);
-
-                switch (random)
-                {
-                    case (1):
-                        Network.Instantiate(AI, spawnPoint1.position, Quaternion.identity, 0);
-                        break;
-
-                    case (2):
-                        Network.Instantiate(AI, spawnPoint2.position, Quaternion.identity, 0);
-                        break;
-
-                    case (3):
-                        Network.Instantiate(AI, spawnPoint3.position, Quaternion.identity, 0);
-                        break;
-
-                    case (4):
-                        Network.Instantiate(AI, spawnPoint4.position, Quaternion.identity, 0);
-                        break;
-
-                    case (5):
-                        Network.Instantiate(AI, spawnPoint5.position, Quaternion.identity, 0);
-                        break;
-
-                    case (6):
-                        Network.Instantiate(AI, spawnPoint6.position, Quaternion.identity, 0);
-                        break;
-
-                    case (7):
-                        Network.Instantiate(AI, spawnPoint7.position, Quaternion.identity, 0);
-                        break;
-
-                    case (8):
-                        Network.Instantiate(AI, spawnPoint8.position, Quaternion.identity, 0);
-                        break;
-
-                    case (9):
-                        Network.Instantiate(AI, spawnPoint9.position, Quaternion.identity, 0);
-                        break;
-
-                    case (10):
-                        Network.Instantiate(AI, spawnPoint10.position, Quaternion.identity, 0);
-                        break;
-                }
-            }
-        }
     }
 }
