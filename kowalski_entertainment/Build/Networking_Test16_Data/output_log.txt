@@ -1,0 +1,153 @@
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     128 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.054 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     128 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.051 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\System.Core.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2638 -> priority: 1 
+  Thread -> id: 1e34 -> priority: 1 
+<RI> Initialized touch support.
+Platform assembly: D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Build\Networking_Test16_Data\Managed\System.Core.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 10f0 -> priority: 1 
+  Thread -> id: 212c -> priority: 1 
+Received pong from 25.90.224.157:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Received pong from 131.159.194.154:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Received pong from 25.90.224.157:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Failed to connect. This is caused by an incorrect parameters, internal error or too many existing connections.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 336)
+
+Received pong from 131.159.194.154:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Received pong from 25.90.224.157:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Failed to connect. This is caused by an incorrect parameters, internal error or too many existing connections.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 336)
+
+Received pong from 131.159.194.154:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Received pong from 25.90.224.157:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Failed to connect. This is caused by an incorrect parameters, internal error or too many existing connections.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 336)
+
+Received pong from 131.159.194.154:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Received pong from 25.90.224.157:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Failed to connect. This is caused by an incorrect parameters, internal error or too many existing connections.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 336)
+
+Received pong from 131.159.194.154:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Received pong from 25.90.224.157:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Failed to connect. This is caused by an incorrect parameters, internal error or too many existing connections.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 336)
+
+Received pong from 131.159.194.154:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Received pong from 25.90.224.157:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Failed to connect. This is caused by an incorrect parameters, internal error or too many existing connections.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 336)
+
+Received pong from 131.159.194.154:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Received pong from 25.90.224.157:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Failed to connect. This is caused by an incorrect parameters, internal error or too many existing connections.
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 336)
+
+Received pong from 131.159.194.154:25000
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 845)
+
+Couldn't send buffered RPCs to client
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Network/NetworkManager.cpp Line: 1171)
+
+Player 2 connected from 25.90.224.157:65433
+UnityEngine.Debug:Internal_Log(Int32, String, Object)
+UnityEngine.Debug:Log(Object)
+NetworkManager:OnPlayerConnected(NetworkPlayer) (at D:\MyDocuments\Git\kowalski_entertainment\kowalski_entertainment\Assets\Scripts\Network\NetworkManager.cs:87)
+ 
+(Filename: D:/MyDocuments/Git/kowalski_entertainment/kowalski_entertainment/Assets/Scripts/Network/NetworkManager.cs Line: 87)
+
