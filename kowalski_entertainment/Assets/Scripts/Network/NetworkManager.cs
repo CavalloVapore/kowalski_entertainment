@@ -45,9 +45,12 @@ public class NetworkManager : MonoBehaviour
     private int random;
     private int random2;
 
+    private int currentWave;
+    private GameObject buffer;
 
     void Start()
     {
+        currentWave = 1;
         //if (GUI.Button(new Rect(100, 100, 250, 100), "Start Server"))
         //startButton.GetComponent<Button>().onClick.AddListener(() => { Debug.Log("y"); });
         startButton.GetComponent<Button>().onClick.AddListener(() => { StartServer(); });
@@ -91,16 +94,79 @@ public class NetworkManager : MonoBehaviour
             isRefreshingHostList = false;
             hostList = MasterServer.PollHostList();
         }
-        if (Input.GetKeyDown(KeyCode.F))
+        buffer = GameObject.FindGameObjectWithTag("Enemy");
+        if (currentWave >= 1 && Network.isServer && buffer == null)
         {
-            for (int i = 0; i <= 5; i++)
+            if (currentWave == 1)
+            {
+                for(int i = 1; i <= 2; i++){
+                    Network.Instantiate(AI1, spawnPoint1.position, Quaternion.identity, 0);
+                    Network.Instantiate(AI1, spawnPoint2.position, Quaternion.identity, 0);
+                    Network.Instantiate(AI1, spawnPoint5.position, Quaternion.identity, 0);
+                    Network.Instantiate(AI1, spawnPoint6.position, Quaternion.identity, 0);
+                }
+                currentWave++;
+            }
+            else if (currentWave == 2)
+            {
+                for (int i = 1; i <= 2; i++)
+                {
+                    int[] ran1 = { 3, 4, 5, 6, 7, 8 };
+                    GameObject plane1 = (GameObject)Network.Instantiate(AI4, spawnPointAir1.position, Quaternion.identity, 0);
+                    plane1.GetComponent<AgentPlaneScript>().chooseTarget = ran1[Random.Range(0, 6)];
+                    int[] ran2 = { 3, 4, 5, 6, 7, 8 };
+                    GameObject plane2 = (GameObject)Network.Instantiate(AI4, spawnPointAir2.position, Quaternion.identity, 0);
+                    plane2.GetComponent<AgentPlaneScript>().chooseTarget = ran2[Random.Range(0, 6)];
+                    int[] ran3 = { 1, 2, 4, 6, 7, 8 };
+                    GameObject plane3 = (GameObject)Network.Instantiate(AI4, spawnPointAir3.position, Quaternion.identity, 0);
+                    plane3.GetComponent<AgentPlaneScript>().chooseTarget = ran3[Random.Range(0, 6)];int[] ran4 = { 1,2,3,5,6,7 };
+                    GameObject plane4 = (GameObject)Network.Instantiate(AI4, spawnPointAir4.position, Quaternion.identity, 0);
+                    plane4.GetComponent<AgentPlaneScript>().chooseTarget = ran4[Random.Range(0, 6)];
+                    int[] ran5 = { 1, 2, 4, 6, 7, 8 };
+                    GameObject plane5 = (GameObject)Network.Instantiate(AI4, spawnPointAir5.position, Quaternion.identity, 0);
+                    plane5.GetComponent<AgentPlaneScript>().chooseTarget = ran5[Random.Range(0, 6)];
+                    int[] ran6 = { 1,2,3,4,5,8};
+                    GameObject plane6 = (GameObject)Network.Instantiate(AI4, spawnPointAir6.position, Quaternion.identity, 0);
+                    plane6.GetComponent<AgentPlaneScript>().chooseTarget = ran6[Random.Range(0, 6)];
+                    int[] ran7 = { 1, 2, 3, 4, 5, 8 };
+                    GameObject plane7 = (GameObject)Network.Instantiate(AI4, spawnPointAir7.position, Quaternion.identity, 0);
+                    plane7.GetComponent<AgentPlaneScript>().chooseTarget = ran7[Random.Range(0, 6)];
+                    int[] ran8 = { 1, 2, 3, 5, 6, 7 };
+                    GameObject plane8 = (GameObject)Network.Instantiate(AI4, spawnPointAir8.position, Quaternion.identity, 0);
+                    plane8.GetComponent<AgentPlaneScript>().chooseTarget = ran8[Random.Range(0, 6)];
+                }
+                currentWave++;
+            }
+            else if (currentWave == 3)
+            {
+                for (int i = 1; i <= 2; i++)
+                {
+                    Network.Instantiate(AI1, spawnPoint1.position, Quaternion.identity, 0);
+                    Network.Instantiate(AI1, spawnPoint2.position, Quaternion.identity, 0);
+                    Network.Instantiate(AI1, spawnPoint5.position, Quaternion.identity, 0);
+                    Network.Instantiate(AI1, spawnPoint6.position, Quaternion.identity, 0);
+                }
+                currentWave++;
+            }
+            else if (currentWave == 4)
+            {
+                for (int i = 1; i <= 2; i++)
+                {
+                    Network.Instantiate(AI1, spawnPoint1.position, Quaternion.identity, 0);
+                    Network.Instantiate(AI1, spawnPoint2.position, Quaternion.identity, 0);
+                    Network.Instantiate(AI1, spawnPoint5.position, Quaternion.identity, 0);
+                    Network.Instantiate(AI1, spawnPoint6.position, Quaternion.identity, 0);
+                }
+                currentWave++;
+            }
+            /*for (int i = 0; i <= 5; i++)
             {
                 random = Random.Range(1, 9);
                 random2 = Random.Range(0, 4);
 
                 switch (random2)
                 {
-                    case (0):
+                    case (0)://Jeep
                         switch (random)
                         {
                             case (1):
@@ -137,7 +203,7 @@ public class NetworkManager : MonoBehaviour
                         }
                         break;
 
-                    case (1):
+                    case (1)://Jeep2
                         switch (random)
                         {
                             case (1):
@@ -174,7 +240,7 @@ public class NetworkManager : MonoBehaviour
                         }
                         break;
 
-                    case (2):
+                    case (2)://Panzer
                         switch (random)
                         {
                             case (1):
@@ -211,7 +277,7 @@ public class NetworkManager : MonoBehaviour
                         }
                         break;
 
-                        case (3):
+                        case (3)://Flieger
                         switch (random)
                         {
                             case (1):
@@ -264,7 +330,7 @@ public class NetworkManager : MonoBehaviour
                         }
                         break;
                 }
-            }
+            }*/
         }
     }
 
@@ -299,5 +365,9 @@ public class NetworkManager : MonoBehaviour
     {
         playerCount++;
         Debug.Log("Player " + playerCount + " connected from " + player.ipAddress + ":" + player.port);
+        if(playerCount == 2){
+            currentWave = 1;
+            Debug.Log("Looks good");
+        }
     }
 }

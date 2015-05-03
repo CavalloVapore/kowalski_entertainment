@@ -56,7 +56,6 @@ public class CharacterController : MonoBehaviour
         damage = 2;
         lr = GetComponent<LineRenderer>();
         anim = GetComponentInChildren<Animator>();
-        anim.SetInteger("test", 1);
 
         posNorth = GameObject.FindGameObjectWithTag("North").transform;
 
