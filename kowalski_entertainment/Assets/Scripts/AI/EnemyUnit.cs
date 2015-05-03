@@ -9,8 +9,6 @@ public class EnemyUnit : MonoBehaviour
 
     public NetworkView nView;
 
-    bool isExploded = false;
-
     public enum EnemyType
     {
         Vehicle,
@@ -27,18 +25,18 @@ public class EnemyUnit : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
     {
-        if (enemyHealth <= 0 && isExploded == false)
+        if (enemyHealth <= 0)
         {
             //Debug.Log(enemyUnit.enemyHealth);
-            isExploded = true;
+            Debug.Log(nView.owner);
             Network.RemoveRPCs(nView.viewID);
-            GetComponent<jeep_destructor>().Explode();
+            Network.Destroy(gameObject);
         }
 	}
 
     public void ReduceHealth (int damage)
     {
-        enemyHealth -= damage;
+        enemyHealth -= 1;
         //syncHealth(enemyHealth);
     }
 
