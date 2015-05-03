@@ -50,7 +50,6 @@ public class NetworkManager : MonoBehaviour
 
     void Start()
     {
-        currentWave = 1;
         //if (GUI.Button(new Rect(100, 100, 250, 100), "Start Server"))
         //startButton.GetComponent<Button>().onClick.AddListener(() => { Debug.Log("y"); });
         startButton.GetComponent<Button>().onClick.AddListener(() => { StartServer(); });
