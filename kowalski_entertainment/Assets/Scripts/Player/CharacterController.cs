@@ -53,7 +53,7 @@ public class CharacterController : MonoBehaviour
         spreadInc = 0.1f;
         spreadDec = 0.1f;
         atkSpeed = 0.2f;
-        damage = 2;
+        damage = 3;
         lr = GetComponent<LineRenderer>();
         anim = GetComponentInChildren<Animator>();
 
