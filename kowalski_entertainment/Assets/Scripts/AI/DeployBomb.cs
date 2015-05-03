@@ -7,6 +7,11 @@ public class DeployBomb : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        Invoke("TriggerExplosion", 1.0f);
+    }
+
+    void TriggerExplosion()
+    {
         bomb.Explode();
     }
 }
