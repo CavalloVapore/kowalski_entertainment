@@ -212,7 +212,7 @@ public class NetworkManager : MonoBehaviour
                         break;
 
                         case (3):
-                        switch (random)
+                        switch (Random.Range(1,3))
                         {
                             case (1):
                                 int[] ran1 = { 3,4,5,6,7,8};
