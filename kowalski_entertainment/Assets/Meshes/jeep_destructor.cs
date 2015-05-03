@@ -5,7 +5,7 @@ public class jeep_destructor : MonoBehaviour
 {
     public float wreck_lifetime = 8.0f;
 
-	void Explode()
+	public void Explode()
     {
         // Get Detonator, there's only one so this works
         Detonator exp = transform.GetComponentInChildren<Detonator>();
@@ -66,7 +66,6 @@ public class jeep_destructor : MonoBehaviour
 
     void CleanUp()
     {
-        //Network.Destroy(gameObject);
-        Destroy(gameObject);
+        Network.Destroy(gameObject);
     }
 }
