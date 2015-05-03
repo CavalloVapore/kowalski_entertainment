@@ -50,8 +50,6 @@ public class NetworkManager : MonoBehaviour
 
     void Start()
     {
-        //currentWave = 1;
-        Debug.Log(currentWave);
         //if (GUI.Button(new Rect(100, 100, 250, 100), "Start Server"))
         //startButton.GetComponent<Button>().onClick.AddListener(() => { Debug.Log("y"); });
         startButton.GetComponent<Button>().onClick.AddListener(() => { StartServer(); });
@@ -68,7 +66,7 @@ public class NetworkManager : MonoBehaviour
             {
                 for (int i = 0; i < hostList.Length; i++)
                 {
-                    if (GUI.Button(new Rect(450, 200 + (110 * i), 300, 100), hostList[i].gameName))
+                    if (GUI.Button(new Rect(650, 200 + (110 * i), 300, 100), hostList[i].gameName))
                         JoinServer(hostList[i]);
                 }
             }
@@ -80,6 +78,7 @@ public class NetworkManager : MonoBehaviour
         Network.InitializeServer(5, 25000, !Network.HavePublicAddress());
         MasterServer.RegisterHost(typeName, gameName);
         canvas.enabled = false;
+        Cursor.visible = false;
     }
 
     void OnServerInitialized()
@@ -410,6 +409,7 @@ public class NetworkManager : MonoBehaviour
     private void JoinServer(HostData hostData)
     {
         canvas.enabled = false;
+        Cursor.visible = false;
         Network.Connect(hostData);
     }
 
@@ -428,7 +428,7 @@ public class NetworkManager : MonoBehaviour
     {
         playerCount++;
         Debug.Log("Player " + playerCount + " connected from " + player.ipAddress + ":" + player.port);
-        if(playerCount == 2){
+        if(playerCount == 4){
             currentWave = 1;
             Debug.Log("Looks good");
         }
