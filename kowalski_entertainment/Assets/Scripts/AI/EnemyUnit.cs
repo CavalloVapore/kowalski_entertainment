@@ -32,7 +32,25 @@ public class EnemyUnit : MonoBehaviour
             //Debug.Log(enemyUnit.enemyHealth);
             isExploded = true;
             Network.RemoveRPCs(nView.viewID);
-            GetComponent<jeep_destructor>().Explode();
+            switch(gameObject.name)
+            { 
+                case("EnemyLV1(Clone)"):
+                    GetComponent<jeep_destructor>().Explode();
+                    break;
+
+                case ("EnemyLV2(Clone)"):
+                    GetComponent<armoured_jeep_destructor>().Explode();
+                    break;
+
+                case ("EnemyLV3(Clone)"):
+                    GetComponent<tank_destructor>().Explode();
+                    break;
+
+                case ("EnemyLV5(Clone)"):
+                    GetComponent<plane_destructor>().Explode();
+                    break;
+            }
+            GetComponent<NavMeshAgent>().Stop();
         }
 	}
 
