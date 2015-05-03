@@ -4,9 +4,12 @@ using System.Collections;
 public class plane_destructor : MonoBehaviour 
 {
     public float wreck_lifetime = 6.0f;
+    public AudioClip explosionSFX;
 
 	public void Explode()
     {
+
+        AudioSource.PlayClipAtPoint(explosionSFX, transform.position);
         // Get Detonator, there's only one so this works
         Detonator exp = transform.GetComponentInChildren<Detonator>();
         // Save healthy GO

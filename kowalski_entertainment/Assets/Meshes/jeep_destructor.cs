@@ -4,16 +4,14 @@ using System.Collections;
 public class jeep_destructor : MonoBehaviour 
 {
     public float wreck_lifetime = 8.0f;
+    public AudioClip explosionSFX;
 
-    void Awake ()
-    {
-        //AudioSource audio = GetComponent<AudioSource>();
-    }
+    
 
 	public void Explode()
     {
         //audio.audio.
-
+        AudioSource.PlayClipAtPoint(explosionSFX, transform.position);
         // Get Detonator, there's only one so this works
         Detonator exp = transform.GetComponentInChildren<Detonator>();
         // Save healthy GO
