@@ -6,6 +6,7 @@ public class KillAI : MonoBehaviour
 
 	void OnTriggerEnter( Collider other)
     {
-        Destroy(other.gameObject);
+        Network.RemoveRPCs(other.gameObject.GetComponent<NetworkView>().viewID);
+        Network.Destroy(other.gameObject);
     }
 }
