@@ -50,6 +50,8 @@ public class NetworkManager : MonoBehaviour
 
     void Start()
     {
+        //currentWave = 1;
+        Debug.Log(currentWave);
         //if (GUI.Button(new Rect(100, 100, 250, 100), "Start Server"))
         //startButton.GetComponent<Button>().onClick.AddListener(() => { Debug.Log("y"); });
         startButton.GetComponent<Button>().onClick.AddListener(() => { StartServer(); });
@@ -94,8 +96,10 @@ public class NetworkManager : MonoBehaviour
             hostList = MasterServer.PollHostList();
         }
         buffer = GameObject.FindGameObjectWithTag("Enemy");
+        Debug.Log(buffer);
         if (currentWave >= 1 && Network.isServer && buffer == null)
         {
+            Debug.Log("Test");
             if (currentWave == 1)
             {
                 for(int i = 1; i <= 2; i++){
