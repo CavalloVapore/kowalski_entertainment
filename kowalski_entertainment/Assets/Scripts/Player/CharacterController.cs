@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using UnityStandardAssets.Utility;
 
@@ -24,6 +25,8 @@ public class CharacterController : MonoBehaviour
     private float spread;
     private float spreadInc;
     private float spreadDec;
+
+    public Image bar;
 
     private int damage;
     private float atkSpeed;
@@ -93,6 +96,8 @@ public class CharacterController : MonoBehaviour
         }
         //Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 
+        bar.fillAmount = heat / 100;
+
     }
 
     void FixedUpdate()
@@ -134,7 +139,7 @@ public class CharacterController : MonoBehaviour
         //Fire
         if (Physics.Raycast(ray, out hit))
         {
-            hitPos = hit.transform.position;
+            hitPos = hit.point;
             //Enemyhit
             if (hit.collider.gameObject.tag == "Enemy")
             {
