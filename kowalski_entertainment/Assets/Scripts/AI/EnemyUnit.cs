@@ -41,6 +41,14 @@ public class EnemyUnit : MonoBehaviour
                 case ("EnemyLV2(Clone)"):
                     GetComponent<armoured_jeep_destructor>().Explode();
                     break;
+
+                case ("EnemyLV3(Clone)"):
+                    GetComponent<tank_destructor>().Explode();
+                    break;
+
+                case ("EnemyLV5(Clone)"):
+                    GetComponent<plane_destructor>().Explode();
+                    break;
             }
             GetComponent<NavMeshAgent>().Stop();
         }
