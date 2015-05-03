@@ -36,6 +36,7 @@ public class NetworkManager : MonoBehaviour
     void Start()
     {
         //if (GUI.Button(new Rect(100, 100, 250, 100), "Start Server"))
+        //startButton.GetComponent<Button>().onClick.AddListener(() => { Debug.Log("y"); });
         startButton.GetComponent<Button>().onClick.AddListener(() => { StartServer(); });
 
         //if (GUI.Button(new Rect(100, 250, 250, 100), "Refresh Hosts"))
