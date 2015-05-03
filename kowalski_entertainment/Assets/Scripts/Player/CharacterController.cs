@@ -33,6 +33,7 @@ public class CharacterController : MonoBehaviour
     private float lastShot;
 
     private LineRenderer lr;
+    private Animator anim; 
 
     private Vector3 hitPos;
     Ray ray;
@@ -54,6 +55,8 @@ public class CharacterController : MonoBehaviour
         atkSpeed = 0.2f;
         damage = 2;
         lr = GetComponent<LineRenderer>();
+        anim = GetComponentInChildren<Animator>();
+        anim.SetInteger("test", 1);
 
         posNorth = GameObject.FindGameObjectWithTag("North").transform;
 
@@ -62,7 +65,7 @@ public class CharacterController : MonoBehaviour
 
         if (nView.isMine)
         {
-            Camera.main.transform.position = this.transform.position;
+            Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y + 0.6f, transform.position.z-1);
             Camera.main.transform.rotation = this.transform.rotation;
             Camera.main.transform.parent = this.transform;
         }
@@ -90,10 +93,15 @@ public class CharacterController : MonoBehaviour
         //Feuern
         if (Input.GetButton("Fire1") && !overheat && Time.time > (lastShot + atkSpeed))
         {
+            anim.SetBool("isFiring", true);
             //Debug.Log("RATATA");
             //Debug.Log(lastShot);
             ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width * 0.5f + Random.Range(-spreadFactor * spread, spreadFactor * spread), Screen.height * 0.5f + Random.Range(-spreadFactor * spread, spreadFactor * spread), 0f));
             Fire();
+        }
+        else
+        {
+            anim.SetBool("isFiring", false);
         }
         //Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 
