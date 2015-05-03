@@ -26,7 +26,7 @@ public class AgentPlaneScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (chooseTarget)
+        switch (chooseTarget-1)
         {
             case (0):
                 agent.SetDestination(target1.position);
