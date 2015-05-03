@@ -7,6 +7,8 @@ public class jeep_destructor : MonoBehaviour
 
 	public void Explode()
     {
+        
+
         // Get Detonator, there's only one so this works
         Detonator exp = transform.GetComponentInChildren<Detonator>();
         // Save healthy GO
