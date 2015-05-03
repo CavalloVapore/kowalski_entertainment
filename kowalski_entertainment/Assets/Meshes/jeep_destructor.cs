@@ -1,12 +1,20 @@
 ﻿using UnityEngine;
+using UnityEditor.Audio;
 using System.Collections;
 
 public class jeep_destructor : MonoBehaviour 
 {
     public float wreck_lifetime = 8.0f;
 
+    void Awake ()
+    {
+        //AudioSource audio = GetComponent<AudioSource>();
+    }
+
 	public void Explode()
     {
+        //audio.audio.
+
         // Get Detonator, there's only one so this works
         Detonator exp = transform.GetComponentInChildren<Detonator>();
         // Save healthy GO
