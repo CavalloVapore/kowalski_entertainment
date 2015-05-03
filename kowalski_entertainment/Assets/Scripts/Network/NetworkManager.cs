@@ -82,7 +82,7 @@ public class NetworkManager : MonoBehaviour
         {
             for (int i = 0; i <= 5; i++)
             {
-                random = Random.Range(0, 10);
+                random = Random.Range(1, 9);
 
                 switch (random)
                 {
