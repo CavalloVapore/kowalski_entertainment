@@ -16,9 +16,6 @@ public class CharacterController : MonoBehaviour
     public Texture2D crosshair;
 
     public Transform posNorth;
-    public Transform posEast;
-    public Transform posSouth;
-    public Transform posWest;
     public SimpleMouseRotator smr;
 
     public GameObject projectilePrefab;
@@ -44,8 +41,6 @@ public class CharacterController : MonoBehaviour
     void Start()
     {
 
-
-        myPosition = Position.NORTH;
         heat = 0;
         heatInc = 10;
         heatDec = 0.5f;
@@ -57,10 +52,9 @@ public class CharacterController : MonoBehaviour
         lr = GetComponent<LineRenderer>();
 
         posNorth = GameObject.FindGameObjectWithTag("North").transform;
-        posSouth = GameObject.FindGameObjectWithTag("South").transform;
-        posEast = GameObject.FindGameObjectWithTag("East").transform;
-        posWest = GameObject.FindGameObjectWithTag("West").transform;
-        Switch();
+
+        transform.position = posNorth.position;
+        smr.m_OriginalRotation = posNorth.rotation;
 
         if (nView.isMine)
         {
@@ -74,6 +68,15 @@ public class CharacterController : MonoBehaviour
     void Update()
     {
 
+        transform.position = new Vector3(transform.position.x, 17.0f, transform.position.z);
+        if(transform.position.x < -8)
+            transform.position = new Vector3(-8, transform.position.y, transform.position.z);
+        if (transform.position.x > 22)
+            transform.position = new Vector3(22, transform.position.y, transform.position.z);
+        if (transform.position.z > 16)
+            transform.position = new Vector3(transform.position.x, transform.position.y, 16);
+        if (transform.position.z < -12)
+            transform.position = new Vector3(transform.position.x, transform.position.y, -12);
 
         //ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width * 0.5f, Screen.height, 0f));
 
@@ -90,28 +93,6 @@ public class CharacterController : MonoBehaviour
         }
         //Debug.DrawRay(ray.origin, ray.direction * 10, Color.yellow);
 
-        //Postionen Switchen
-
-        if (Input.GetButtonDown("North"))
-        {
-            myPosition = Position.NORTH;
-            Switch();
-        }
-        if (Input.GetButtonDown("East"))
-        {
-            myPosition = Position.EAST;
-            Switch();
-        }
-        if (Input.GetButtonDown("South"))
-        {
-            myPosition = Position.SOUTH;
-            Switch();
-        }
-        if (Input.GetButtonDown("West"))
-        {
-            myPosition = Position.WEST;
-            Switch();
-        }
     }
 
     void FixedUpdate()
@@ -178,30 +159,6 @@ public class CharacterController : MonoBehaviour
         //Last Shot
         lastShot = Time.time;
     }
-
-    void Switch()
-    {
-        switch (myPosition)
-        {
-            case Position.NORTH:
-                transform.position = posNorth.position;
-                smr.m_OriginalRotation = posNorth.rotation;
-                break;
-            case Position.EAST:
-                transform.position = posEast.position;
-                smr.m_OriginalRotation = posEast.rotation;
-                break;
-            case Position.SOUTH:
-                transform.position = posSouth.position;
-                smr.m_OriginalRotation = posSouth.rotation;
-                break;
-            case Position.WEST:
-                transform.position = posWest.position;
-                smr.m_OriginalRotation = posWest.rotation;
-                break;
-        }
-    }
-
      void OnGUI()
      {
          float x = (Screen.width/2) - (crosshair.width/2);
