@@ -85,12 +85,6 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
             transform.Translate(Vector3.left * Time.deltaTime * speed);
-
-        if (Input.GetKey(KeyCode.E))
-            transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rotSpeed, Space.World);
-
-        if (Input.GetKey(KeyCode.Q))
-            transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * rotSpeed, Space.World);
     }
 
     private void SyncedMovement()
