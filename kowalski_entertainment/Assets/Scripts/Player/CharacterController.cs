@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using UnityStandardAssets.Utility;
 
@@ -20,6 +21,8 @@ public class CharacterController : MonoBehaviour
     public Transform posSouth;
     public Transform posWest;
     public SimpleMouseRotator smr;
+
+    public Image bar;
 
     public GameObject projectilePrefab;
     public GameObject tracer;
@@ -112,6 +115,8 @@ public class CharacterController : MonoBehaviour
             myPosition = Position.WEST;
             Switch();
         }
+
+        bar.fillAmount = heat / 100;
     }
 
     void FixedUpdate()
@@ -153,7 +158,7 @@ public class CharacterController : MonoBehaviour
         //Fire
         if (Physics.Raycast(ray, out hit))
         {
-            hitPos = hit.transform.position;
+            hitPos = hit.point;
             //Enemyhit
             if (hit.collider.gameObject.tag == "Enemy")
             {
