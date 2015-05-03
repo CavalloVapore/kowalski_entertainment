@@ -43,6 +43,7 @@ public class CharacterController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        bar = GetComponentInChildren<Image>();
 
         heat = 0;
         heatInc = 10;
